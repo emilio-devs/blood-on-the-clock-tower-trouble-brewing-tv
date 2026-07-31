@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trouble Brewing · Guía pública</title>
+  <meta name="description" content="Pantalla TV de referencia pública para Blood on the Clocktower: Trouble Brewing, con música de fantasía y los 23 personajes.">
+  <meta property="og:title" content="Blood on the Clocktower · Trouble Brewing">
+  <meta property="og:description" content="Guía pública para una partida presencial de Trouble Brewing.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://emilio-devs.github.io/blood-on-the-clock-tower-trouble-brewing-tv/og.png">
+  <style>
+    :root{--cream:#f2e8d2;--muted:#d0c6b4;--gold:#b99a59;--town:#74b9e8;--out:#57cec8;--min:#e57c47;--demon:#ef4350}
+    *{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden}body{background:#07070a;color:var(--cream);font-family:"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased}button,input{font:inherit}button{color:inherit}
+    #app{isolation:isolate;position:relative;display:grid;grid-template-rows:clamp(64px,7.9vh,86px) 1fr clamp(23px,2.7vh,29px);width:100vw;height:100dvh;overflow:hidden;background:radial-gradient(circle at 80% -20%,rgba(108,43,81,.36),transparent 44%),radial-gradient(circle at -10% 110%,rgba(25,61,90,.27),transparent 43%),linear-gradient(135deg,#08080c,#100c12 52%,#08090d)}
+    #app:before,#app:after{content:"";position:absolute;z-index:-1;inset:0;pointer-events:none}#app:before{opacity:.13;background-image:repeating-linear-gradient(115deg,transparent 0 3px,rgba(255,255,255,.025) 3px 4px),repeating-radial-gradient(circle at 20% 30%,transparent 0 7px,rgba(185,154,89,.035) 8px 9px)}#app:after{box-shadow:inset 0 0 11vw rgba(0,0,0,.94),inset 0 0 0 1px rgba(185,154,89,.24)}
+    .mist{position:absolute;z-index:-1;width:58vw;height:58vw;left:24vw;top:-28vw;border-radius:50%;background:radial-gradient(circle,rgba(136,38,83,.1),transparent 68%);animation:drift 80s ease-in-out infinite alternate}@keyframes drift{to{transform:translate(5vw,4vh) scale(1.12)}}
+    header{display:grid;grid-template-columns:minmax(280px,1.15fr) minmax(180px,.7fr) auto;align-items:center;gap:clamp(9px,1.2vw,24px);padding:clamp(7px,1vh,11px) clamp(13px,1.3vw,25px);border-bottom:1px solid rgba(185,154,89,.42);background:linear-gradient(180deg,rgba(19,15,20,.97),rgba(10,9,13,.91));box-shadow:0 8px 30px rgba(0,0,0,.35)}
+    .brand{display:flex;align-items:center;gap:clamp(9px,.8vw,16px);min-width:0}.moon{display:grid;place-items:center;flex:0 0 auto;width:clamp(40px,3vw,56px);aspect-ratio:1;border:1px solid rgba(185,154,89,.68);border-radius:50%;color:#d3b977;background:radial-gradient(circle,rgba(185,154,89,.14),transparent 68%);font-size:clamp(21px,1.7vw,32px);box-shadow:0 0 18px rgba(185,154,89,.09),inset 0 0 12px rgba(185,154,89,.09)}
+    .brand p,.brand h1{margin:0;font-family:Georgia,"Times New Roman",serif;text-transform:uppercase;white-space:nowrap}.brand p{color:#ded5c3;font-size:clamp(13px,1.05vw,20px);font-weight:700;letter-spacing:.12em}.brand h1{margin-top:2px;color:var(--gold);font-size:clamp(10px,.75vw,15px);letter-spacing:.3em;font-weight:600}
+    .now{text-align:right;min-width:0}.now small{display:block;color:#897e6d;font-size:clamp(8px,.54vw,11px);letter-spacing:.15em;text-transform:uppercase}.now span{display:block;overflow:hidden;color:#d8cfbb;font-size:clamp(11px,.75vw,15px);text-overflow:ellipsis;white-space:nowrap}
+    .controls{display:flex;align-items:center;gap:clamp(4px,.4vw,8px);transition:opacity .5s}.controls button,.volume{display:flex;align-items:center;justify-content:center;gap:7px;height:clamp(33px,3.7vh,40px);border:1px solid rgba(185,154,89,.34);border-radius:4px;background:rgba(255,255,255,.035)}.controls button{padding:0 clamp(8px,.6vw,12px);cursor:pointer}.controls button:hover{border-color:rgba(185,154,89,.75);background:rgba(185,154,89,.11)}.controls button:disabled{opacity:.5;cursor:wait}.controls svg{width:clamp(15px,1vw,19px);height:clamp(15px,1vw,19px);stroke-width:2}.controls .square{width:clamp(34px,2.2vw,42px);padding:0}.controls button span{font-size:clamp(10px,.65vw,13px);white-space:nowrap}.volume{padding:0 clamp(7px,.5vw,10px)}.volume input{width:clamp(50px,4vw,78px);accent-color:var(--gold)}.volume output{width:28px;color:#aaa08f;font-size:clamp(9px,.6vw,12px)}
+    .board{min-height:0;display:grid;grid-template-columns:minmax(0,2.12fr) minmax(410px,1fr);gap:clamp(7px,.65vw,13px);padding:clamp(6px,.68vh,8px) clamp(9px,.72vw,14px)}
+    .section{--role:var(--town);min-height:0;display:flex;flex-direction:column}.section-title{display:flex;align-items:center;gap:8px;min-height:clamp(20px,2.3vh,25px);color:var(--role)}.section-title h2{margin:0;font-family:Georgia,"Times New Roman",serif;font-size:clamp(11px,.8vw,16px);letter-spacing:.18em;text-transform:uppercase;text-shadow:0 0 14px currentColor}.rule{flex:1;height:1px;background:linear-gradient(90deg,transparent,currentColor);opacity:.55}.rule:last-child{background:linear-gradient(90deg,currentColor,transparent)}.grid{flex:1;min-height:0;display:grid;gap:clamp(5px,.45vw,9px)}
+    .town .grid{grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(4,minmax(0,1fr))}.town .card:nth-last-child(2){grid-column:2}.outsiders{--role:var(--out)}.minions{--role:var(--min)}.demon{--role:var(--demon)}.right{min-height:0;display:grid;grid-template-rows:1fr 1fr .62fr;gap:clamp(3px,.48vh,6px)}.right .grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr))}.right .demon .grid{grid-template-columns:1fr;grid-template-rows:1fr}
+    .card{position:relative;min-width:0;min-height:0;overflow:hidden;padding:clamp(7px,.72vh,10px) clamp(8px,.65vw,12px);border:1px solid color-mix(in srgb,var(--role) 47%,#26232a);border-left:3px solid var(--role);border-radius:3px;background:linear-gradient(115deg,color-mix(in srgb,var(--role) 7%,transparent),transparent 45%),rgba(17,16,21,.89);box-shadow:inset 0 0 22px rgba(0,0,0,.28),0 2px 8px rgba(0,0,0,.22)}.card:after{content:"";position:absolute;right:-17px;bottom:-17px;width:45px;height:45px;border:1px solid color-mix(in srgb,var(--role) 18%,transparent);transform:rotate(45deg)}
+    .heading{display:flex;align-items:center;gap:clamp(6px,.45vw,9px);margin-bottom:clamp(3px,.38vh,5px)}.icon{display:grid;place-items:center;flex:0 0 auto;width:clamp(26px,1.7vw,33px);aspect-ratio:1;border:1px solid color-mix(in srgb,var(--role) 58%,transparent);border-radius:50%;color:var(--role);background:color-mix(in srgb,var(--role) 7%,transparent)}.icon svg{width:58%;height:58%}.card h3{min-width:0;margin:0;color:#f5ead2;font-family:Georgia,"Times New Roman",serif;font-size:clamp(13px,1vw,19px);line-height:1.04;letter-spacing:.025em;text-transform:uppercase}.card p{margin:0;color:#dad2c2;font-size:clamp(12.5px,.81vw,15.6px);font-weight:500;line-height:1.2;text-wrap:pretty}
+    .right .card{padding:clamp(5px,.52vh,8px) clamp(7px,.55vw,10px)}.right .heading{margin-bottom:clamp(2px,.2vh,3px)}.right .card h3{font-size:clamp(12px,.85vw,16px)}.right .card p{font-size:clamp(11.5px,.72vw,14px);line-height:1.15}.featured{display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto 1fr;align-items:center;column-gap:clamp(12px,1vw,18px);border-left-width:4px;background:linear-gradient(105deg,rgba(239,67,80,.15),rgba(20,10,14,.93) 58%)}.featured .heading{grid-row:1/3;display:flex;flex-direction:column;margin:0;text-align:center}.featured .icon{width:clamp(36px,2.7vw,52px)}.featured h3{color:#ffd8d2;font-size:clamp(15px,1.15vw,22px)!important}.featured p{align-self:center;font-size:clamp(12px,.8vw,15.5px)!important;line-height:1.2!important}
+    footer{display:flex;align-items:center;padding:0 clamp(12px,1.1vw,22px);border-top:1px solid rgba(185,154,89,.28);color:#c3b8a5;background:rgba(7,7,10,.8);font-size:clamp(10px,.7vw,14px)}footer b{margin-right:4px;color:var(--gold);font-size:1.3em}.foot-right{margin-left:auto;color:#8d816e}.player{position:fixed;width:1px;height:1px;left:-10px;bottom:-10px;opacity:0;pointer-events:none}.track-toast{position:absolute;z-index:5;left:50%;top:calc(clamp(64px,7.9vh,86px) + 12px);transform:translate(-50%,-8px);padding:8px 15px;border:1px solid rgba(185,154,89,.48);border-radius:4px;background:rgba(8,7,11,.94);color:#eadfc9;font-size:13px;letter-spacing:.03em;opacity:0;pointer-events:none;transition:opacity .22s,transform .22s}.track-toast.show{opacity:1;transform:translate(-50%,0)}.idle{cursor:none}.idle .controls{opacity:.2}
+    @media(max-width:1500px){header{grid-template-columns:minmax(270px,1fr) auto}.now{display:none}.board{grid-template-columns:minmax(0,2.04fr) minmax(350px,1fr)}.controls button span{display:none}.controls button:first-child,.controls .fullscreen{width:40px;padding:0}}
+    @media(max-height:820px){#app{grid-template-rows:61px 1fr 21px}.board{padding-top:4px;padding-bottom:4px}.section-title{min-height:19px}.card{padding-top:5px;padding-bottom:5px}.heading{margin-bottom:2px}.card p{line-height:1.1}.right .card p{line-height:1.08}.right{grid-template-rows:1fr 1fr .57fr;gap:3px}}
+    @media(prefers-reduced-motion:reduce){.mist{animation:none}}
+  </style>
+</head>
+<body>
+  <main id="app">
+    <div class="mist" aria-hidden="true"></div>
+    <header>
+      <div class="brand"><div class="moon" aria-hidden="true">☾</div><div><p>Blood on the Clocktower</p><h1>Trouble Brewing</h1></div></div>
+      <div class="now"><small>Ambiente seleccionado</small><span id="track-name">Preparando ambiente…</span></div>
+      <div class="controls" aria-label="Controles globales">
+        <button id="play" aria-label="Reproducir música" title="Reproducir música"><i data-lucide="play"></i><span>Reproducir</span></button>
+        <button id="next" class="square" aria-label="Cambiar canción" title="Cambiar canción"><i data-lucide="refresh-cw"></i></button>
+        <label class="volume" title="Volumen de la música"><i data-lucide="volume-2" aria-hidden="true"></i><input id="volume" type="range" min="0" max="100" value="18" aria-label="Volumen"><output id="volume-value">18%</output></label>
+        <button id="fullscreen" class="fullscreen" aria-label="Pantalla completa" title="Pantalla completa"><i data-lucide="maximize"></i><span>Pantalla completa</span></button>
+      </div>
+    </header>
+    <div class="board">
+      <section class="section town"><div class="section-title"><i class="rule"></i><h2>Aldeanos</h2><i class="rule"></i></div><div class="grid" id="townsfolk"></div></section>
+      <aside class="right">
+        <section class="section outsiders"><div class="section-title"><i class="rule"></i><h2>Forasteros</h2><i class="rule"></i></div><div class="grid" id="outsiders"></div></section>
+        <section class="section minions"><div class="section-title"><i class="rule"></i><h2>Secuaces</h2><i class="rule"></i></div><div class="grid" id="minions"></div></section>
+        <section class="section demon"><div class="section-title"><i class="rule"></i><h2>Demonio</h2><i class="rule"></i></div><div class="grid" id="demon"></div></section>
+      </aside>
+    </div>
+    <footer><b>*</b> No actúa durante la primera noche.<span class="foot-right">✦ &nbsp; Guía pública · Trouble Brewing</span></footer>
+    <div id="track-toast" class="track-toast" aria-live="polite"></div>
+  </main>
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+  <script>
+    const characters={
+      townsfolk:[
+        {name:"Aldeano",ability:"No tienes ninguna habilidad. ¡Pero sigues siendo una buena persona! Ayuda a tu pueblo a encontrar al Demonio.",icon:"user"},
+        {name:"Lavandera",ability:"Empiezas sabiendo que 1 de 2 jugadores es un Aldeano en particular.",icon:"shirt"},
+        {name:"Bibliotecario",ability:"Empiezas sabiendo que 1 de 2 jugadores es un Forastero en particular. (O que no hay ninguno en juego.)",icon:"book-marked"},
+        {name:"Investigador",ability:"Empiezas sabiendo que 1 de 2 jugadores es un Secuaz en particular.",icon:"search"},
+        {name:"Chef",ability:"Empiezas sabiendo cuántas parejas de jugadores malvados hay.",icon:"chef-hat"},
+        {name:"Empático",ability:"Cada noche, descubres cuántos de tus 2 vecinos vivos son malvados.",icon:"hand-heart"},
+        {name:"Adivino",ability:"Cada noche, elige 2 jugadores: descubres si alguno es un Demonio. Hay un jugador bueno que se registra como Demonio para ti.",icon:"eye"},
+        {name:"Enterrador",ability:"Cada noche*, descubres qué personaje murió por ejecución hoy.",icon:"shovel"},
+        {name:"Monje",ability:"Cada noche*, elige un jugador (no tú mismo): está a salvo del Demonio esta noche.",icon:"church"},
+        {name:"Guardacuervos",ability:"Si mueres de noche, te despiertan para elegir un jugador: descubres su personaje.",icon:"bird"},
+        {name:"Soldado",ability:"Estás a salvo del Demonio.",icon:"shield"},
+        {name:"Virgen",ability:"La primera vez que eres nominado, si el nominador es un Aldeano, es ejecutado inmediatamente.",icon:"flower-2"},
+        {name:"Verdugo",ability:"Una vez por partida, durante el día, elige públicamente a un jugador: si es el Demonio, muere.",icon:"crosshair"},
+        {name:"Alcalde",ability:"Si solo quedan 3 jugadores vivos y no hay ejecución, tu equipo gana. Si mueres de noche, otro jugador podría morir en tu lugar.",icon:"landmark"}
+      ],
+      outsiders:[
+        {name:"Santo",ability:"Si mueres por ejecución, tu equipo pierde.",icon:"sparkles"},
+        {name:"Recluso",ability:"Podrías registrarte como malvado y como un Secuaz o Demonio, incluso estando muerto.",icon:"castle"},
+        {name:"Borracho",ability:"No sabes que eres el Borracho. Crees que eres un personaje Aldeano, pero no lo eres.",icon:"beer"},
+        {name:"Mayordomo",ability:"Cada noche, elige un jugador (no tú): mañana, solo puedes votar si ellos también están votando.",icon:"bell-ring"}
+      ],
+      minions:[
+        {name:"Mujer Escarlata",ability:"Si hay 5 o más jugadores vivos y el Demonio muere, tú te conviertes en el Demonio.",icon:"flower"},
+        {name:"Envenenador",ability:"Cada noche, elige un jugador: está envenenado esta noche.",icon:"flask-conical"},
+        {name:"Barón",ability:"Hay Forasteros extra en juego. [+2 Forasteros]",icon:"crown"},
+        {name:"Espía",ability:"Cada noche, puedes mirar el Grimorio. Podrías registrarte como bueno y como un Aldeano o Forastero, incluso estando muerto.",icon:"glasses"}
+      ],
+      demon:[{name:"Diablo",ability:"Cada noche*, elige un jugador: muere. Si te matas a ti mismo, un Secuaz se convierte en el Diablo.",icon:"flame"}]
+    };
+    const tracks=[
+      {name:"Never Go Full Bard · taberna folk",artist:"HitCtrl",license:"CC BY 3.0",url:"https://opengameart.org/sites/default/files/RPG%20Never%20Go%20Full%20Bard.mp3"},
+      {name:"Minstrel Dance · danza medieval",artist:"RandomMind",license:"CC0",url:"https://opengameart.org/sites/default/files/Minstrel_Dance_0.mp3"},
+      {name:"The Enchanted Forest of Min · folk oscuro",artist:"HitCtrl",license:"CC BY 3.0",url:"https://opengameart.org/sites/default/files/RPG%20-%20The%20Enchanted%20Forest%20of%20Min.mp3"},
+      {name:"Woodland Fantasy · violín y laúd",artist:"Matthew Pablo",license:"CC BY 3.0",url:"https://lpc.opengameart.org/sites/default/files/Woodland%20Fantasy_0.mp3"},
+      {name:"Dragon Tail Tavern · taberna animada",artist:"Jan125",license:"CC BY 4.0",url:"https://opengameart.org/sites/default/files/dragontailtavern.ogg"}
+    ];
+    const card=(role,featured=false)=>`<article class="card${featured?' featured':''}"><div class="heading"><span class="icon" aria-hidden="true"><i data-lucide="${role.icon}"></i></span><h3>${role.name}</h3></div><p>${role.ability}</p></article>`;
+    Object.entries(characters).forEach(([group,roles])=>document.getElementById(group).innerHTML=roles.map(r=>card(r,group==='demon')).join(''));
+    if(window.lucide)lucide.createIcons({attrs:{'stroke-width':1.8}});
+
+    let trackIndex=Math.floor(Math.random()*tracks.length),playing=false,toastTimer=null,failed=0;
+    const audio=new Audio(),playButton=document.getElementById('play'),nextButton=document.getElementById('next'),trackName=document.getElementById('track-name'),toast=document.getElementById('track-toast');
+    audio.preload='metadata';audio.volume=.18;
+    function refreshIcons(){if(window.lucide)lucide.createIcons({attrs:{'stroke-width':2}})}
+    function setPlayState(active){playing=active;playButton.innerHTML=`<i data-lucide="${active?'pause':'play'}"></i><span>${active?'Pausar':'Reproducir'}</span>`;playButton.setAttribute('aria-label',active?'Pausar música':'Reproducir música');playButton.title=active?'Pausar música':'Reproducir música';refreshIcons()}
+    function showTrack(showToast=false){const track=tracks[trackIndex];trackName.textContent=track.name;if(showToast){toast.textContent=`Ahora suena: ${track.name}`;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),2400)}}
+    function loadTrack(){audio.src=tracks[trackIndex].url;audio.load();showTrack(true)}
+    async function toggleMusic(){try{if(!audio.src)loadTrack();if(playing)audio.pause();else await audio.play()}catch{toast.textContent='No se pudo cargar la música. Comprueba la conexión.';toast.classList.add('show')}}
+    async function nextTrack(automatic=false){const resume=playing;trackIndex=(trackIndex+1)%tracks.length;loadTrack();if(resume){try{await audio.play()}catch{if(automatic&&failed++<tracks.length)nextTrack(true)}}}
+    audio.addEventListener('play',()=>{failed=0;setPlayState(true)});audio.addEventListener('pause',()=>setPlayState(false));audio.addEventListener('ended',()=>nextTrack(true));audio.addEventListener('error',()=>{if(failed++<tracks.length)nextTrack(true)});
+    showTrack();playButton.addEventListener('click',toggleMusic);nextButton.addEventListener('click',()=>nextTrack(false));
+    document.getElementById('volume').addEventListener('input',e=>{document.getElementById('volume-value').textContent=e.target.value+'%';audio.volume=Number(e.target.value)/100});
+    document.getElementById('fullscreen').addEventListener('click',async()=>{if(document.fullscreenElement)await document.exitFullscreen();else await document.documentElement.requestFullscreen()});
+    document.addEventListener('fullscreenchange',()=>{const button=document.getElementById('fullscreen');button.innerHTML=`<i data-lucide="${document.fullscreenElement?'minimize':'maximize'}"></i><span>${document.fullscreenElement?'Salir':'Pantalla completa'}</span>`;button.setAttribute('aria-label',document.fullscreenElement?'Salir de pantalla completa':'Pantalla completa');refreshIcons()});
+    let idleTimer;const wake=()=>{document.getElementById('app').classList.remove('idle');clearTimeout(idleTimer);idleTimer=setTimeout(()=>document.getElementById('app').classList.add('idle'),4000)};addEventListener('mousemove',wake);addEventListener('touchstart',wake);wake();
+  </script>
+</body>
+</html>
