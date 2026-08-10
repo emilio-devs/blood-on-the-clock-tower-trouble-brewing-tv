@@ -1,0 +1,224 @@
+{
+  "locale": "en",
+  "label": "English",
+  "ui": {
+    "brand": "Blood on the Clocktower",
+    "documentTitle": "{edition} · Public guide",
+    "metaDescription": "TV reference screen for Blood on the Clocktower: {edition}, with fantasy music and every character on the script.",
+    "ogTitle": "Blood on the Clocktower · {edition}",
+    "ogDescription": "Public reference guide for an in-person game of {edition}.",
+    "editionSelector": "Select edition",
+    "languageSelector": "Select language",
+    "comingSoon": "Coming soon",
+    "ambienceSelected": "Selected ambience",
+    "preparingAmbience": "Preparing ambience…",
+    "controls": "Global controls",
+    "play": "Play",
+    "pause": "Pause",
+    "playMusic": "Play music",
+    "pauseMusic": "Pause music",
+    "nextTrack": "Change track",
+    "volume": "Music volume",
+    "fullscreen": "Fullscreen",
+    "exitFullscreen": "Exit fullscreen",
+    "nowPlaying": "Now playing: {track}",
+    "footer": "Public guide for players"
+  },
+  "trackMoods": {
+    "tavernFolk": "tavern folk",
+    "medievalDance": "medieval dance",
+    "darkFolk": "dark folk",
+    "violinLute": "violin and lute",
+    "livelyTavern": "lively tavern"
+  },
+  "editions": [
+    {
+      "id": "trouble-brewing",
+      "name": "Trouble Brewing",
+      "status": "available",
+      "groups": [
+        {
+          "id": "townsfolk",
+          "label": "Townsfolk",
+          "note": "",
+          "roles": [
+            {
+              "id": "generic-townsfolk",
+              "name": "Townsfolk",
+              "icon": "user",
+              "ability": ["You have no ability. But you are still a good person! Help your town find the Demon."]
+            },
+            {
+              "id": "washerwoman",
+              "name": "Washerwoman",
+              "icon": "shirt",
+              "ability": ["On the first night, you learn that between 2 players, 1 is a specific <strong>Townsfolk</strong>."]
+            },
+            {
+              "id": "librarian",
+              "name": "Librarian",
+              "icon": "book-marked",
+              "ability": ["On the first night, you learn that between 2 players, 1 is a specific <strong>Outsider</strong>. (Or that none are in play.)"]
+            },
+            {
+              "id": "investigator",
+              "name": "Investigator",
+              "icon": "search",
+              "ability": ["On the first night, you learn that between 2 players, 1 is a specific <strong>Minion</strong>."]
+            },
+            {
+              "id": "chef",
+              "name": "Chef",
+              "icon": "chef-hat",
+              "ability": ["On the first night, you learn how many pairs of evil players are sitting next to each other."]
+            },
+            {
+              "id": "empath",
+              "name": "Empath",
+              "icon": "hand-heart",
+              "ability": ["Each night, you learn how many of your 2 alive neighbours are evil."]
+            },
+            {
+              "id": "fortune-teller",
+              "name": "Fortune Teller",
+              "icon": "eye",
+              "ability": ["Each night, choose 2 players: you learn if either is the <strong>Demon</strong>. One good player may appear as the <strong>Demon</strong>, even though they are not."]
+            },
+            {
+              "id": "undertaker",
+              "name": "Undertaker",
+              "icon": "shovel",
+              "ability": ["Each night, except the first, you learn the role of the player executed today."]
+            },
+            {
+              "id": "monk",
+              "name": "Monk",
+              "icon": "church",
+              "ability": ["Each night, except the first, choose another player: the <strong>Demon</strong> cannot kill them tonight."]
+            },
+            {
+              "id": "ravenkeeper",
+              "name": "Ravenkeeper",
+              "icon": "bird",
+              "ability": ["If you die at night, choose a player and learn their role."]
+            },
+            {
+              "id": "soldier",
+              "name": "Soldier",
+              "icon": "shield",
+              "ability": ["If the <strong>Demon</strong> chooses you as their victim, they cannot kill you."]
+            },
+            {
+              "id": "virgin",
+              "name": "Virgin",
+              "icon": "flower-2",
+              "ability": ["The first time you are nominated, if the nominator is a <strong>Townsfolk</strong>, they are executed immediately. Otherwise, nothing happens and you lose this ability."]
+            },
+            {
+              "id": "slayer",
+              "name": "Slayer",
+              "icon": "crosshair",
+              "ability": ["Once per game, during the day, publicly choose a player: if they are the <strong>Demon</strong>, they die."]
+            },
+            {
+              "id": "mayor",
+              "name": "Mayor",
+              "icon": "landmark",
+              "ability": ["If only 3 players are alive and there is no execution, your team wins. If you die at night, another player might die instead."]
+            }
+          ]
+        },
+        {
+          "id": "outsiders",
+          "label": "Outsiders",
+          "note": "",
+          "roles": [
+            {
+              "id": "saint",
+              "name": "Saint",
+              "icon": "sparkles",
+              "ability": ["If the town executes you, your team loses."]
+            },
+            {
+              "id": "recluse",
+              "name": "Recluse",
+              "icon": "castle",
+              "ability": ["Abilities that investigate you may see you as <strong>evil</strong>, a <strong>Minion</strong> or a <strong>Demon</strong>, even though you are not, even while dead."]
+            },
+            {
+              "id": "drunk",
+              "name": "Drunk",
+              "icon": "beer",
+              "ability": ["You do not know that you are the Drunk. You think you are a Townsfolk character, but you are not."]
+            },
+            {
+              "id": "butler",
+              "name": "Butler",
+              "icon": "bell-ring",
+              "ability": ["Each night, choose a player (not yourself): tomorrow you may only vote if that player also votes in that nomination."]
+            }
+          ]
+        },
+        {
+          "id": "minions",
+          "label": "Minions",
+          "note": "They do not know who the <strong>Demon</strong> is.",
+          "roles": [
+            {
+              "id": "scarlet-woman",
+              "name": "Scarlet Woman",
+              "icon": "flower",
+              "ability": ["If 5 or more players are alive and the Demon dies, you become the Demon."]
+            },
+            {
+              "id": "poisoner",
+              "name": "Poisoner",
+              "icon": "flask-conical",
+              "ability": ["Each night, poison a player until the following dusk. While poisoned, their ability does not work and they may receive false information."]
+            },
+            {
+              "id": "baron",
+              "name": "Baron",
+              "icon": "crown",
+              "ability": ["There are extra Outsiders in play. [+2 Outsiders]"]
+            },
+            {
+              "id": "spy",
+              "name": "Spy",
+              "icon": "glasses",
+              "ability": ["Each night, you see the Grimoire. Abilities that investigate you may see you as <strong>good</strong>, a <strong>Townsfolk</strong> or an <strong>Outsider</strong>, even though you are not, even while dead."]
+            }
+          ]
+        },
+        {
+          "id": "demon",
+          "label": "Demon",
+          "note": "On the first night, the Demon learns which players are their <strong>Minions</strong>, but not their roles, and 3 bluff roles that are not in play.",
+          "roles": [
+            {
+              "id": "imp",
+              "name": "Imp",
+              "icon": "flame",
+              "ability": [
+                "Each night, except the first, choose a player: they die.",
+                "If you choose yourself, a Minion becomes the <strong>Demon</strong>."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bad-moon-rising",
+      "name": "Bad Moon Rising",
+      "status": "coming-soon",
+      "groups": []
+    },
+    {
+      "id": "sects-and-violets",
+      "name": "Sects & Violets",
+      "status": "coming-soon",
+      "groups": []
+    }
+  ]
+}

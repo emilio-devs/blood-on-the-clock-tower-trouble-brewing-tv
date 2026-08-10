@@ -1,0 +1,224 @@
+{
+  "locale": "es",
+  "label": "Español",
+  "ui": {
+    "brand": "Blood on the Clocktower",
+    "documentTitle": "{edition} · Guía pública",
+    "metaDescription": "Pantalla TV de referencia pública para Blood on the Clocktower: {edition}, con música de fantasía y los personajes del guion.",
+    "ogTitle": "Blood on the Clocktower · {edition}",
+    "ogDescription": "Guía pública para una partida presencial de {edition}.",
+    "editionSelector": "Seleccionar edición",
+    "languageSelector": "Seleccionar idioma",
+    "comingSoon": "Próximamente",
+    "ambienceSelected": "Ambiente seleccionado",
+    "preparingAmbience": "Preparando ambiente…",
+    "controls": "Controles globales",
+    "play": "Reproducir",
+    "pause": "Pausar",
+    "playMusic": "Reproducir música",
+    "pauseMusic": "Pausar música",
+    "nextTrack": "Cambiar canción",
+    "volume": "Volumen de la música",
+    "fullscreen": "Pantalla completa",
+    "exitFullscreen": "Salir de pantalla completa",
+    "nowPlaying": "Ahora suena: {track}",
+    "footer": "Guía pública para jugadores"
+  },
+  "trackMoods": {
+    "tavernFolk": "taberna folk",
+    "medievalDance": "danza medieval",
+    "darkFolk": "folk oscuro",
+    "violinLute": "violín y laúd",
+    "livelyTavern": "taberna animada"
+  },
+  "editions": [
+    {
+      "id": "trouble-brewing",
+      "name": "Trouble Brewing",
+      "status": "available",
+      "groups": [
+        {
+          "id": "townsfolk",
+          "label": "Aldeanos",
+          "note": "",
+          "roles": [
+            {
+              "id": "generic-townsfolk",
+              "name": "Aldeano",
+              "icon": "user",
+              "ability": ["No tienes ninguna habilidad. ¡Pero sigues siendo una buena persona! Ayuda a tu pueblo a encontrar al Demonio."]
+            },
+            {
+              "id": "washerwoman",
+              "name": "Lavandera",
+              "icon": "shirt",
+              "ability": ["La primera noche, descubres que entre 2 jugadores, 1 es un <strong>Aldeano</strong> concreto."]
+            },
+            {
+              "id": "librarian",
+              "name": "Bibliotecario",
+              "icon": "book-marked",
+              "ability": ["La primera noche, descubres que entre 2 jugadores, 1 es un <strong>Forastero</strong> concreto. (O que no hay ninguno en juego.)"]
+            },
+            {
+              "id": "investigator",
+              "name": "Investigador",
+              "icon": "search",
+              "ability": ["La primera noche, descubres que entre 2 jugadores, 1 es un <strong>Secuaz</strong> concreto."]
+            },
+            {
+              "id": "chef",
+              "name": "Chef",
+              "icon": "chef-hat",
+              "ability": ["La primera noche, descubres cuántas parejas de jugadores malvados están sentadas juntas."]
+            },
+            {
+              "id": "empath",
+              "name": "Empático",
+              "icon": "hand-heart",
+              "ability": ["Cada noche, descubres cuántos de tus 2 vecinos vivos son malvados."]
+            },
+            {
+              "id": "fortune-teller",
+              "name": "Adivino",
+              "icon": "eye",
+              "ability": ["Cada noche, elige 2 jugadores: descubres si alguno es el <strong>Demonio</strong>. Un jugador bueno puede aparecer como <strong>Demonio</strong>, aunque no lo sea."]
+            },
+            {
+              "id": "undertaker",
+              "name": "Enterrador",
+              "icon": "shovel",
+              "ability": ["Cada noche, después de la primera, descubres el rol del jugador ejecutado durante el día."]
+            },
+            {
+              "id": "monk",
+              "name": "Monje",
+              "icon": "church",
+              "ability": ["Cada noche, después de la primera, elige a otro jugador: el <strong>Demonio</strong> no puede matarlo esa noche."]
+            },
+            {
+              "id": "ravenkeeper",
+              "name": "Guardacuervos",
+              "icon": "bird",
+              "ability": ["Si mueres de noche, elige un jugador y descubres su rol."]
+            },
+            {
+              "id": "soldier",
+              "name": "Soldado",
+              "icon": "shield",
+              "ability": ["Si el <strong>Demonio</strong> te elige como víctima, no puede matarte."]
+            },
+            {
+              "id": "virgin",
+              "name": "Virgen",
+              "icon": "flower-2",
+              "ability": ["La primera vez que te nominen, si quien lo hace es un <strong>Aldeano</strong>, es ejecutado inmediatamente. Si no, no ocurre nada y pierdes esta habilidad."]
+            },
+            {
+              "id": "slayer",
+              "name": "Verdugo",
+              "icon": "crosshair",
+              "ability": ["Una vez por partida, durante el día, elige públicamente a un jugador: si es el <strong>Demonio</strong>, muere."]
+            },
+            {
+              "id": "mayor",
+              "name": "Alcalde",
+              "icon": "landmark",
+              "ability": ["Si solo quedan 3 jugadores vivos y no hay ejecución, tu equipo gana. Si mueres de noche, otro jugador podría morir en tu lugar."]
+            }
+          ]
+        },
+        {
+          "id": "outsiders",
+          "label": "Forasteros",
+          "note": "",
+          "roles": [
+            {
+              "id": "saint",
+              "name": "Santo",
+              "icon": "sparkles",
+              "ability": ["Si el pueblo te ejecuta, tu equipo pierde."]
+            },
+            {
+              "id": "recluse",
+              "name": "Recluso",
+              "icon": "castle",
+              "ability": ["Las habilidades que te investiguen podrían verte como <strong>malvado</strong>, <strong>Secuaz</strong> o <strong>Demonio</strong>, aunque no lo seas, incluso muerto."]
+            },
+            {
+              "id": "drunk",
+              "name": "Borracho",
+              "icon": "beer",
+              "ability": ["No sabes que eres el Borracho. Crees que eres un personaje Aldeano, pero no lo eres."]
+            },
+            {
+              "id": "butler",
+              "name": "Mayordomo",
+              "icon": "bell-ring",
+              "ability": ["Cada noche, elige a un jugador (no tú): mañana solo puedes votar si ese jugador también vota en esa nominación."]
+            }
+          ]
+        },
+        {
+          "id": "minions",
+          "label": "Secuaces",
+          "note": "No saben quién es el <strong>Demonio</strong>.",
+          "roles": [
+            {
+              "id": "scarlet-woman",
+              "name": "Mujer Escarlata",
+              "icon": "flower",
+              "ability": ["Si hay 5 o más jugadores vivos y el Demonio muere, tú te conviertes en el Demonio."]
+            },
+            {
+              "id": "poisoner",
+              "name": "Envenenador",
+              "icon": "flask-conical",
+              "ability": ["Cada noche, envenenas a un jugador hasta el anochecer siguiente. Envenenado: su habilidad no funciona y puede recibir información falsa."]
+            },
+            {
+              "id": "baron",
+              "name": "Barón",
+              "icon": "crown",
+              "ability": ["Hay Forasteros extra en juego. [+2 Forasteros]"]
+            },
+            {
+              "id": "spy",
+              "name": "Espía",
+              "icon": "glasses",
+              "ability": ["Cada noche, ves el Grimorio. Las habilidades que te investiguen podrían verte como <strong>bueno</strong>, <strong>Aldeano</strong> o <strong>Forastero</strong>, aunque no lo seas, incluso muerto."]
+            }
+          ]
+        },
+        {
+          "id": "demon",
+          "label": "Demonio",
+          "note": "La primera noche, conoce qué jugadores son sus <strong>Secuaces</strong>, pero no sus roles, y 3 roles de farol que no están en juego.",
+          "roles": [
+            {
+              "id": "imp",
+              "name": "Diablo",
+              "icon": "flame",
+              "ability": [
+                "Cada noche, después de la primera, elige a un jugador: muere.",
+                "Si te eliges a ti mismo, un Secuaz se convierte en el <strong>Demonio</strong>."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bad-moon-rising",
+      "name": "Bad Moon Rising",
+      "status": "coming-soon",
+      "groups": []
+    },
+    {
+      "id": "sects-and-violets",
+      "name": "Sects & Violets",
+      "status": "coming-soon",
+      "groups": []
+    }
+  ]
+}

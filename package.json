@@ -1,0 +1,11 @@
+{
+  "name": "blood-on-the-clock-tower-tv",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/test.mjs && node scripts/build.mjs --check",
+    "test": "node scripts/test.mjs"
+  }
+}

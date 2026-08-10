@@ -1,26 +1,41 @@
-# Blood on the Clocktower · Trouble Brewing TV
+# Blood on the Clocktower · TV Guide
 
-Pantalla de referencia pública para una partida presencial de **Blood on the Clocktower: Trouble Brewing**. Está diseñada para mostrarse en una televisión 16:9 y mantener visibles simultáneamente los 23 personajes, sus nombres y sus habilidades completas.
+Pantalla de referencia pública y multilingüe para partidas presenciales de **Blood on the Clocktower**. Está diseñada principalmente para una televisión 16:9 y también se adapta a tabletas y móviles.
 
 ## Abrir la pantalla
 
 - **Online:** [abrir la versión de GitHub Pages](https://emilio-devs.github.io/blood-on-the-clock-tower-trouble-brewing-tv/)
 - **En local:** descarga `index.html` y ábrelo con Chrome o Edge.
 
-La interfaz funciona como un único archivo HTML. La música necesita conexión a Internet porque las pistas se reproducen desde OpenGameArt.
+El `index.html` publicado funciona como un único archivo autónomo y puede abrirse directamente. Los datos de personajes e idiomas se incrustan durante la compilación. La música y los iconos necesitan conexión a Internet porque se cargan desde OpenGameArt y Lucide.
 
 ## Funciones
 
-- Los 23 personajes de Trouble Brewing en español.
+- Trouble Brewing con sus 23 tarjetas actuales.
+- Español e inglés, con detección automática y preferencias guardadas.
+- Selector preparado para Trouble Brewing, Bad Moon Rising y Sects & Violets.
 - Diseño oscuro de grimorio optimizado para 1920 × 1080.
 - Música instrumental de fantasía con reproducción, pausa, cambio de canción y volumen.
 - Pantalla completa.
 - Ocultación automática del cursor y los controles tras unos segundos sin actividad.
 - Sin backend, instalación ni configuración.
 
+## Datos y compilación
+
+- `data/es.json` y `data/en.json` contienen la interfaz, las ediciones y los personajes traducidos.
+- `src/index.template.html` y `src/app.js` contienen la presentación y el comportamiento.
+- `index.html` es un archivo generado y no debe editarse directamente.
+
+Para regenerar y validar el HTML:
+
+```powershell
+npm run build
+npm run check
+```
+
 ## Publicación
 
-Cada cambio enviado a la rama `main` se publica automáticamente mediante GitHub Pages.
+Cada cambio enviado a la rama `main` se compila, valida y publica automáticamente mediante GitHub Pages.
 
 ## Créditos
 

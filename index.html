@@ -1,25 +1,26 @@
 <!doctype html>
-<html lang="es">
+<!-- Archivo generado: modifica src/index.template.html, src/app.js o data/*.json. -->
+<html lang="es" data-ready="false">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Trouble Brewing · Guía pública</title>
-  <meta name="description" content="Pantalla TV de referencia pública para Blood on the Clocktower: Trouble Brewing, con música de fantasía y los 23 personajes.">
-  <meta property="og:title" content="Blood on the Clocktower · Trouble Brewing">
-  <meta property="og:description" content="Guía pública para una partida presencial de Trouble Brewing.">
+  <meta id="meta-description" name="description" content="Pantalla TV de referencia pública para Blood on the Clocktower: Trouble Brewing, con música de fantasía y los 23 personajes.">
+  <meta id="og-title" property="og:title" content="Blood on the Clocktower · Trouble Brewing">
+  <meta id="og-description" property="og:description" content="Guía pública para una partida presencial de Trouble Brewing.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://emilio-devs.github.io/blood-on-the-clock-tower-trouble-brewing-tv/og.png">
   <style>
     :root{--cream:#f2e8d2;--muted:#d0c6b4;--gold:#b99a59;--town:#74b9e8;--out:#57cec8;--min:#e57c47;--demon:#ef4350}
-    *{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden}body{background:#07070a;color:var(--cream);font-family:"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased}button,input{font:inherit}button{color:inherit}
+    *{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden}html[data-ready="false"] body{visibility:hidden}body{background:#07070a;color:var(--cream);font-family:"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased}button,input{font:inherit}button{color:inherit}.visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
     #app{isolation:isolate;position:relative;display:grid;grid-template-rows:clamp(64px,7.9vh,86px) 1fr clamp(23px,2.7vh,29px);width:100vw;height:100dvh;overflow:hidden;background:radial-gradient(circle at 80% -20%,rgba(108,43,81,.36),transparent 44%),radial-gradient(circle at -10% 110%,rgba(25,61,90,.27),transparent 43%),linear-gradient(135deg,#08080c,#100c12 52%,#08090d)}
     #app:before,#app:after{content:"";position:absolute;z-index:-1;inset:0;pointer-events:none}#app:before{opacity:.13;background-image:repeating-linear-gradient(115deg,transparent 0 3px,rgba(255,255,255,.025) 3px 4px),repeating-radial-gradient(circle at 20% 30%,transparent 0 7px,rgba(185,154,89,.035) 8px 9px)}#app:after{box-shadow:inset 0 0 11vw rgba(0,0,0,.94),inset 0 0 0 1px rgba(185,154,89,.24)}
     .mist{position:absolute;z-index:-1;width:58vw;height:58vw;left:24vw;top:-28vw;border-radius:50%;background:radial-gradient(circle,rgba(136,38,83,.1),transparent 68%);animation:drift 80s ease-in-out infinite alternate}@keyframes drift{to{transform:translate(5vw,4vh) scale(1.12)}}
-    header{display:grid;grid-template-columns:minmax(280px,1.15fr) minmax(180px,.7fr) auto;align-items:center;gap:clamp(9px,1.2vw,24px);padding:clamp(7px,1vh,11px) clamp(13px,1.3vw,25px);border-bottom:1px solid rgba(185,154,89,.42);background:linear-gradient(180deg,rgba(19,15,20,.97),rgba(10,9,13,.91));box-shadow:0 8px 30px rgba(0,0,0,.35)}
+    header{position:relative;z-index:20;display:grid;grid-template-columns:minmax(280px,1.15fr) minmax(180px,.7fr) auto;align-items:center;gap:clamp(9px,1.2vw,24px);overflow:visible;padding:clamp(7px,1vh,11px) clamp(13px,1.3vw,25px);border-bottom:1px solid rgba(185,154,89,.42);background:linear-gradient(180deg,rgba(19,15,20,.97),rgba(10,9,13,.91));box-shadow:0 8px 30px rgba(0,0,0,.35)}
     .brand{display:flex;align-items:center;gap:clamp(9px,.8vw,16px);min-width:0}.moon{display:grid;place-items:center;flex:0 0 auto;width:clamp(40px,3vw,56px);aspect-ratio:1;border:1px solid rgba(185,154,89,.68);border-radius:50%;color:#d3b977;background:radial-gradient(circle,rgba(185,154,89,.14),transparent 68%);font-size:clamp(21px,1.7vw,32px);box-shadow:0 0 18px rgba(185,154,89,.09),inset 0 0 12px rgba(185,154,89,.09)}
-    .brand p,.brand h1{margin:0;font-family:Georgia,"Times New Roman",serif;text-transform:uppercase;white-space:nowrap}.brand p{color:#ded5c3;font-size:clamp(13px,1.05vw,20px);font-weight:700;letter-spacing:.12em}.brand h1{margin-top:2px;color:var(--gold);font-size:clamp(10px,.75vw,15px);letter-spacing:.3em;font-weight:600}
+    .brand p{margin:0;color:#ded5c3;font-family:Georgia,"Times New Roman",serif;font-size:clamp(13px,1.05vw,20px);font-weight:700;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}.brand-copy{min-width:0}.dropdown{position:relative}.edition-trigger{display:flex;align-items:center;gap:5px;max-width:100%;margin:2px 0 0;padding:0;border:0;background:transparent;color:var(--gold);font-family:Georgia,"Times New Roman",serif;font-size:clamp(10px,.75vw,15px);font-weight:600;letter-spacing:.3em;text-transform:uppercase;white-space:nowrap;cursor:pointer}.edition-trigger:hover,.edition-trigger:focus-visible{color:#e2c77e}.edition-trigger svg{width:1em;height:1em;flex:0 0 auto;stroke-width:2}.dropdown-menu{position:absolute;z-index:30;top:calc(100% + 9px);display:none;min-width:240px;padding:6px;border:1px solid rgba(185,154,89,.48);border-radius:5px;background:rgba(12,10,15,.98);box-shadow:0 14px 34px rgba(0,0,0,.58)}.dropdown-menu.open{display:grid;gap:3px}.edition-menu{left:0}.language-menu{right:0;min-width:158px}.dropdown-menu button{display:flex!important;align-items:center!important;justify-content:flex-start!important;gap:9px!important;width:100%!important;height:auto!important;min-height:36px;padding:8px 10px!important;border:0!important;border-radius:3px!important;background:transparent!important;color:#ddd2bd!important;font-size:13px!important;line-height:1.2;text-align:left;cursor:pointer}.dropdown-menu button:hover,.dropdown-menu button:focus-visible{background:rgba(185,154,89,.14)!important;color:#fff1d4!important}.dropdown-menu button[aria-checked="true"]{background:rgba(185,154,89,.1)!important;color:#e3c77d!important}.dropdown-menu button:disabled{opacity:.52!important;cursor:not-allowed!important}.menu-check{width:14px;flex:0 0 auto;color:var(--gold)}.menu-label{flex:1}.coming-soon{margin-left:auto;color:#9f927c;font-size:10px;letter-spacing:.08em;text-transform:uppercase}.language-trigger .language-code{display:inline!important;min-width:20px;font-size:11px;font-weight:700;letter-spacing:.06em}.language-trigger .chevron{width:12px;height:12px}
     .now{text-align:right;min-width:0}.now small{display:block;color:#897e6d;font-size:clamp(8px,.54vw,11px);letter-spacing:.15em;text-transform:uppercase}.now span{display:block;overflow:hidden;color:#d8cfbb;font-size:clamp(11px,.75vw,15px);text-overflow:ellipsis;white-space:nowrap}
-    .controls{display:flex;align-items:center;gap:clamp(4px,.4vw,8px);transition:opacity .5s}.controls button,.volume{display:flex;align-items:center;justify-content:center;gap:7px;height:clamp(33px,3.7vh,40px);border:1px solid rgba(185,154,89,.34);border-radius:4px;background:rgba(255,255,255,.035)}.controls button{padding:0 clamp(8px,.6vw,12px);cursor:pointer}.controls button:hover{border-color:rgba(185,154,89,.75);background:rgba(185,154,89,.11)}.controls button:disabled{opacity:.5;cursor:wait}.controls svg{width:clamp(15px,1vw,19px);height:clamp(15px,1vw,19px);stroke-width:2}.controls .square{width:clamp(34px,2.2vw,42px);padding:0}.controls button span{font-size:clamp(10px,.65vw,13px);white-space:nowrap}.volume{padding:0 clamp(7px,.5vw,10px)}.volume input{width:clamp(50px,4vw,78px);accent-color:var(--gold)}.volume output{width:28px;color:#aaa08f;font-size:clamp(9px,.6vw,12px)}
+    .controls{display:flex;align-items:center;gap:clamp(4px,.4vw,8px);transition:opacity .5s}.controls>button,.controls>.dropdown>.language-trigger,.volume{display:flex;align-items:center;justify-content:center;gap:7px;height:clamp(33px,3.7vh,40px);border:1px solid rgba(185,154,89,.34);border-radius:4px;background:rgba(255,255,255,.035)}.controls>button,.controls>.dropdown>.language-trigger{padding:0 clamp(8px,.6vw,12px);cursor:pointer}.controls>button:hover,.controls>.dropdown>.language-trigger:hover{border-color:rgba(185,154,89,.75);background:rgba(185,154,89,.11)}.controls>button:disabled{opacity:.5;cursor:wait}.controls svg{width:clamp(15px,1vw,19px);height:clamp(15px,1vw,19px);stroke-width:2}.controls .square{width:clamp(34px,2.2vw,42px);padding:0}.controls>button span{font-size:clamp(10px,.65vw,13px);white-space:nowrap}.volume{padding:0 clamp(7px,.5vw,10px)}.volume input{width:clamp(50px,4vw,78px);accent-color:var(--gold)}.volume output{width:28px;color:#aaa08f;font-size:clamp(9px,.6vw,12px)}
     .board{min-height:0;display:grid;grid-template-columns:minmax(0,2.12fr) minmax(410px,1fr);gap:clamp(7px,.65vw,13px);padding:clamp(6px,.68vh,8px) clamp(9px,.72vw,14px)}
     .section{--role:var(--town);min-height:0;display:flex;flex-direction:column}.section-title{display:flex;align-items:center;gap:8px;min-height:clamp(20px,2.3vh,25px);color:var(--role)}.section-title h2{margin:0;font-family:Georgia,"Times New Roman",serif;font-size:clamp(11px,.8vw,16px);letter-spacing:.18em;text-transform:uppercase;text-shadow:0 0 14px currentColor}.section-note{margin:0 0 clamp(3px,.35vh,5px);color:#cbbfaf;font-size:clamp(10px,.66vw,12.5px);line-height:1.1;text-align:center}.section-note strong{color:var(--role)}.rule{flex:1;height:1px;background:linear-gradient(90deg,transparent,currentColor);opacity:.55}.rule:last-child{background:linear-gradient(90deg,currentColor,transparent)}.grid{flex:1;min-height:0;display:grid;gap:clamp(5px,.45vw,9px)}
     .town .grid{grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(4,minmax(0,1fr))}.town .card:nth-last-child(2){grid-column:2}.outsiders{--role:var(--out)}.minions{--role:var(--min)}.demon{--role:var(--demon)}.right{min-height:0;display:grid;grid-template-rows:1fr 1fr .62fr;gap:clamp(3px,.48vh,6px)}.right .grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr))}.right .demon .grid{grid-template-columns:1fr;grid-template-rows:1fr}
@@ -27,7 +28,7 @@
     .heading{display:flex;align-items:center;gap:clamp(6px,.45vw,9px);margin-bottom:clamp(3px,.38vh,5px)}.icon{display:grid;place-items:center;flex:0 0 auto;width:clamp(26px,1.7vw,33px);aspect-ratio:1;border:1px solid color-mix(in srgb,var(--role) 58%,transparent);border-radius:50%;color:var(--role);background:color-mix(in srgb,var(--role) 7%,transparent)}.icon svg{width:58%;height:58%}.card h3{min-width:0;margin:0;color:#f5ead2;font-family:Georgia,"Times New Roman",serif;font-size:clamp(13px,1vw,19px);line-height:1.04;letter-spacing:.025em;text-transform:uppercase}.card p{margin:0;color:#dad2c2;font-size:clamp(12.5px,.81vw,15.6px);font-weight:500;line-height:1.2;text-wrap:pretty}.card p strong{color:#fff0d8}.ability-line{display:block}.ability-line+.ability-line{margin-top:.32em}
     .right .card{padding:clamp(5px,.52vh,8px) clamp(7px,.55vw,10px)}.right .heading{margin-bottom:clamp(2px,.2vh,3px)}.right .card h3{font-size:clamp(12px,.85vw,16px)}.right .card p{font-size:clamp(11.5px,.72vw,14px);line-height:1.15}.featured{display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto 1fr;align-items:center;column-gap:clamp(12px,1vw,18px);border-left-width:4px;background:linear-gradient(105deg,rgba(239,67,80,.15),rgba(20,10,14,.93) 58%)}.featured .heading{grid-row:1/3;display:flex;flex-direction:column;margin:0;text-align:center}.featured .icon{width:clamp(36px,2.7vw,52px)}.featured h3{color:#ffd8d2;font-size:clamp(15px,1.15vw,22px)!important}.featured p{grid-column:2;grid-row:1/3;align-self:center;margin:0 clamp(12px,1.2vw,24px);font-size:clamp(12px,.8vw,15.5px)!important;line-height:1.2!important}
     footer{display:flex;align-items:center;padding:0 clamp(12px,1.1vw,22px);border-top:1px solid rgba(185,154,89,.28);color:#c3b8a5;background:rgba(7,7,10,.8);font-size:clamp(10px,.7vw,14px)}footer b{margin-right:4px;color:var(--gold);font-size:1.3em}.foot-right{margin-left:auto;color:#8d816e}.player{position:fixed;width:1px;height:1px;left:-10px;bottom:-10px;opacity:0;pointer-events:none}.track-toast{position:absolute;z-index:5;left:50%;top:calc(clamp(64px,7.9vh,86px) + 12px);transform:translate(-50%,-8px);padding:8px 15px;border:1px solid rgba(185,154,89,.48);border-radius:4px;background:rgba(8,7,11,.94);color:#eadfc9;font-size:13px;letter-spacing:.03em;opacity:0;pointer-events:none;transition:opacity .22s,transform .22s}.track-toast.show{opacity:1;transform:translate(-50%,0)}.idle{cursor:none}.idle .controls{opacity:.2}
-    @media(max-width:1500px){header{grid-template-columns:minmax(270px,1fr) auto}.now{display:none}.board{grid-template-columns:minmax(0,2.04fr) minmax(350px,1fr)}.controls button span{display:none}.controls button:first-child,.controls .fullscreen{width:40px;padding:0}}
+    @media(max-width:1500px){header{grid-template-columns:minmax(270px,1fr) auto}.now{display:none}.board{grid-template-columns:minmax(0,2.04fr) minmax(350px,1fr)}.controls>button span{display:none}.controls>button:first-of-type,.controls .fullscreen{width:40px;padding:0}}
     @media(max-height:820px){#app{grid-template-rows:61px 1fr 21px}.board{padding-top:4px;padding-bottom:4px}.section-title{min-height:19px}.card{padding-top:5px;padding-bottom:5px}.heading{margin-bottom:2px}.card p{line-height:1.1}.right .card p{line-height:1.08}.right{grid-template-rows:1fr 1fr .57fr;gap:3px}}
     @media(max-width:1199px){
       html,body{height:auto;min-height:100%;overflow:auto}#app{width:100%;height:auto;min-height:100dvh;overflow:visible;grid-template-rows:auto auto auto}
@@ -42,7 +43,7 @@
     }
     @media(max-width:600px){
       header{grid-template-columns:1fr;padding:12px 14px;gap:11px}.brand{justify-content:center}.brand p{font-size:14px;letter-spacing:.08em}.brand h1{font-size:11px;letter-spacing:.22em}.moon{width:42px}.now{display:none}
-      .controls{width:100%;justify-content:center;flex-wrap:wrap;gap:7px}.controls button,.volume{height:42px}.controls button:first-child,.controls .fullscreen,.controls .square{width:42px}.volume{flex:1 1 145px;max-width:210px}.volume input{width:min(25vw,90px)}
+      .edition-trigger{margin-left:auto;margin-right:auto}.edition-menu{left:50%;transform:translateX(-50%);min-width:min(280px,calc(100vw - 28px))}.language-menu{left:0;right:auto}.controls{width:100%;justify-content:center;flex-wrap:wrap;gap:7px}.controls>button,.controls>.dropdown>.language-trigger,.volume{height:42px}.controls>button:first-of-type,.controls .fullscreen,.controls .square{width:42px}.volume{flex:1 1 145px;max-width:210px}.volume input{width:min(25vw,90px)}
       .board{padding:10px;gap:16px}.town .grid,.right .grid{grid-template-columns:1fr;gap:9px}.right{gap:16px}
       .card,.right .card{min-height:0;padding:14px 15px}.heading,.right .heading{margin-bottom:8px}.icon{width:34px}.card h3,.right .card h3{font-size:18px;line-height:1.12}.card p,.right .card p,.featured p{font-size:15px!important;line-height:1.42!important}
       .featured{display:block}.featured .heading{display:flex;flex-direction:row;margin-bottom:8px;text-align:left}.featured .icon{width:36px}.featured h3{font-size:19px!important}.featured p{margin:0}.section-title{min-height:34px}.section-title h2{font-size:15px}
@@ -56,9 +57,10 @@
   <main id="app">
     <div class="mist" aria-hidden="true"></div>
     <header>
-      <div class="brand"><div class="moon" aria-hidden="true">☾</div><div><p>Blood on the Clocktower</p><h1>Trouble Brewing</h1></div></div>
-      <div class="now"><small>Ambiente seleccionado</small><span id="track-name">Preparando ambiente…</span></div>
+      <div class="brand"><div class="moon" aria-hidden="true">☾</div><div class="brand-copy"><p id="brand-name">Blood on the Clocktower</p><h1 class="visually-hidden" id="page-heading">Blood on the Clocktower · Trouble Brewing</h1><div class="dropdown edition-picker"><button id="edition-trigger" class="edition-trigger" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="edition-menu"><span id="edition-name">Trouble Brewing</span><i data-lucide="chevron-down" aria-hidden="true"></i></button><div id="edition-menu" class="dropdown-menu edition-menu" role="menu"></div></div></div></div>
+      <div class="now"><small id="ambience-label">Ambiente seleccionado</small><span id="track-name">Preparando ambiente…</span></div>
       <div class="controls" aria-label="Controles globales">
+        <div class="dropdown language-picker"><button id="language-trigger" class="language-trigger" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="language-menu"><i data-lucide="languages" aria-hidden="true"></i><span id="language-code" class="language-code">ES</span><i class="chevron" data-lucide="chevron-down" aria-hidden="true"></i></button><div id="language-menu" class="dropdown-menu language-menu" role="menu"></div></div>
         <button id="play" aria-label="Reproducir música" title="Reproducir música"><i data-lucide="play"></i><span>Reproducir</span></button>
         <button id="next" class="square" aria-label="Cambiar canción" title="Cambiar canción"><i data-lucide="refresh-cw"></i></button>
         <label class="volume" title="Volumen de la música"><i data-lucide="volume-2" aria-hidden="true"></i><input id="volume" type="range" min="0" max="100" value="18" aria-label="Volumen"><output id="volume-value">18%</output></label>
@@ -66,81 +68,393 @@
       </div>
     </header>
     <div class="board">
-      <section class="section town"><div class="section-title"><i class="rule"></i><h2>Aldeanos</h2><i class="rule"></i></div><div class="grid" id="townsfolk"></div></section>
+      <section class="section town"><div class="section-title"><i class="rule"></i><h2 id="townsfolk-title">Aldeanos</h2><i class="rule"></i></div><p id="townsfolk-note" class="section-note" hidden></p><div class="grid" id="townsfolk"></div></section>
       <aside class="right">
-        <section class="section outsiders"><div class="section-title"><i class="rule"></i><h2>Forasteros</h2><i class="rule"></i></div><div class="grid" id="outsiders"></div></section>
-        <section class="section minions"><div class="section-title"><i class="rule"></i><h2>Secuaces</h2><i class="rule"></i></div><p class="section-note">No saben quién es el <strong>Demonio</strong>.</p><div class="grid" id="minions"></div></section>
-        <section class="section demon"><div class="section-title"><i class="rule"></i><h2>Demonio</h2><i class="rule"></i></div><p class="section-note">La primera noche, conoce qué jugadores son sus <strong>Secuaces</strong>, pero no sus roles, y 3 roles de farol que no están en juego.</p><div class="grid" id="demon"></div></section>
+        <section class="section outsiders"><div class="section-title"><i class="rule"></i><h2 id="outsiders-title">Forasteros</h2><i class="rule"></i></div><p id="outsiders-note" class="section-note" hidden></p><div class="grid" id="outsiders"></div></section>
+        <section class="section minions"><div class="section-title"><i class="rule"></i><h2 id="minions-title">Secuaces</h2><i class="rule"></i></div><p id="minions-note" class="section-note"></p><div class="grid" id="minions"></div></section>
+        <section class="section demon"><div class="section-title"><i class="rule"></i><h2 id="demon-title">Demonio</h2><i class="rule"></i></div><p id="demon-note" class="section-note"></p><div class="grid" id="demon"></div></section>
       </aside>
     </div>
-    <footer><span>Guía pública para jugadores</span><span class="foot-right">✦ &nbsp; Trouble Brewing</span></footer>
+    <footer><span id="footer-copy">Guía pública para jugadores</span><span class="foot-right">✦ &nbsp; <span id="footer-edition">Trouble Brewing</span></span></footer>
     <div id="track-toast" class="track-toast" aria-live="polite"></div>
   </main>
   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+  <script id="i18n-data" type="application/json">{"es":{"locale":"es","label":"Español","ui":{"brand":"Blood on the Clocktower","documentTitle":"{edition} · Guía pública","metaDescription":"Pantalla TV de referencia pública para Blood on the Clocktower: {edition}, con música de fantasía y los personajes del guion.","ogTitle":"Blood on the Clocktower · {edition}","ogDescription":"Guía pública para una partida presencial de {edition}.","editionSelector":"Seleccionar edición","languageSelector":"Seleccionar idioma","comingSoon":"Próximamente","ambienceSelected":"Ambiente seleccionado","preparingAmbience":"Preparando ambiente…","controls":"Controles globales","play":"Reproducir","pause":"Pausar","playMusic":"Reproducir música","pauseMusic":"Pausar música","nextTrack":"Cambiar canción","volume":"Volumen de la música","fullscreen":"Pantalla completa","exitFullscreen":"Salir de pantalla completa","nowPlaying":"Ahora suena: {track}","footer":"Guía pública para jugadores"},"trackMoods":{"tavernFolk":"taberna folk","medievalDance":"danza medieval","darkFolk":"folk oscuro","violinLute":"violín y laúd","livelyTavern":"taberna animada"},"editions":[{"id":"trouble-brewing","name":"Trouble Brewing","status":"available","groups":[{"id":"townsfolk","label":"Aldeanos","note":"","roles":[{"id":"generic-townsfolk","name":"Aldeano","icon":"user","ability":["No tienes ninguna habilidad. ¡Pero sigues siendo una buena persona! Ayuda a tu pueblo a encontrar al Demonio."]},{"id":"washerwoman","name":"Lavandera","icon":"shirt","ability":["La primera noche, descubres que entre 2 jugadores, 1 es un \u003cstrong>Aldeano\u003c/strong> concreto."]},{"id":"librarian","name":"Bibliotecario","icon":"book-marked","ability":["La primera noche, descubres que entre 2 jugadores, 1 es un \u003cstrong>Forastero\u003c/strong> concreto. (O que no hay ninguno en juego.)"]},{"id":"investigator","name":"Investigador","icon":"search","ability":["La primera noche, descubres que entre 2 jugadores, 1 es un \u003cstrong>Secuaz\u003c/strong> concreto."]},{"id":"chef","name":"Chef","icon":"chef-hat","ability":["La primera noche, descubres cuántas parejas de jugadores malvados están sentadas juntas."]},{"id":"empath","name":"Empático","icon":"hand-heart","ability":["Cada noche, descubres cuántos de tus 2 vecinos vivos son malvados."]},{"id":"fortune-teller","name":"Adivino","icon":"eye","ability":["Cada noche, elige 2 jugadores: descubres si alguno es el \u003cstrong>Demonio\u003c/strong>. Un jugador bueno puede aparecer como \u003cstrong>Demonio\u003c/strong>, aunque no lo sea."]},{"id":"undertaker","name":"Enterrador","icon":"shovel","ability":["Cada noche, después de la primera, descubres el rol del jugador ejecutado durante el día."]},{"id":"monk","name":"Monje","icon":"church","ability":["Cada noche, después de la primera, elige a otro jugador: el \u003cstrong>Demonio\u003c/strong> no puede matarlo esa noche."]},{"id":"ravenkeeper","name":"Guardacuervos","icon":"bird","ability":["Si mueres de noche, elige un jugador y descubres su rol."]},{"id":"soldier","name":"Soldado","icon":"shield","ability":["Si el \u003cstrong>Demonio\u003c/strong> te elige como víctima, no puede matarte."]},{"id":"virgin","name":"Virgen","icon":"flower-2","ability":["La primera vez que te nominen, si quien lo hace es un \u003cstrong>Aldeano\u003c/strong>, es ejecutado inmediatamente. Si no, no ocurre nada y pierdes esta habilidad."]},{"id":"slayer","name":"Verdugo","icon":"crosshair","ability":["Una vez por partida, durante el día, elige públicamente a un jugador: si es el \u003cstrong>Demonio\u003c/strong>, muere."]},{"id":"mayor","name":"Alcalde","icon":"landmark","ability":["Si solo quedan 3 jugadores vivos y no hay ejecución, tu equipo gana. Si mueres de noche, otro jugador podría morir en tu lugar."]}]},{"id":"outsiders","label":"Forasteros","note":"","roles":[{"id":"saint","name":"Santo","icon":"sparkles","ability":["Si el pueblo te ejecuta, tu equipo pierde."]},{"id":"recluse","name":"Recluso","icon":"castle","ability":["Las habilidades que te investiguen podrían verte como \u003cstrong>malvado\u003c/strong>, \u003cstrong>Secuaz\u003c/strong> o \u003cstrong>Demonio\u003c/strong>, aunque no lo seas, incluso muerto."]},{"id":"drunk","name":"Borracho","icon":"beer","ability":["No sabes que eres el Borracho. Crees que eres un personaje Aldeano, pero no lo eres."]},{"id":"butler","name":"Mayordomo","icon":"bell-ring","ability":["Cada noche, elige a un jugador (no tú): mañana solo puedes votar si ese jugador también vota en esa nominación."]}]},{"id":"minions","label":"Secuaces","note":"No saben quién es el \u003cstrong>Demonio\u003c/strong>.","roles":[{"id":"scarlet-woman","name":"Mujer Escarlata","icon":"flower","ability":["Si hay 5 o más jugadores vivos y el Demonio muere, tú te conviertes en el Demonio."]},{"id":"poisoner","name":"Envenenador","icon":"flask-conical","ability":["Cada noche, envenenas a un jugador hasta el anochecer siguiente. Envenenado: su habilidad no funciona y puede recibir información falsa."]},{"id":"baron","name":"Barón","icon":"crown","ability":["Hay Forasteros extra en juego. [+2 Forasteros]"]},{"id":"spy","name":"Espía","icon":"glasses","ability":["Cada noche, ves el Grimorio. Las habilidades que te investiguen podrían verte como \u003cstrong>bueno\u003c/strong>, \u003cstrong>Aldeano\u003c/strong> o \u003cstrong>Forastero\u003c/strong>, aunque no lo seas, incluso muerto."]}]},{"id":"demon","label":"Demonio","note":"La primera noche, conoce qué jugadores son sus \u003cstrong>Secuaces\u003c/strong>, pero no sus roles, y 3 roles de farol que no están en juego.","roles":[{"id":"imp","name":"Diablo","icon":"flame","ability":["Cada noche, después de la primera, elige a un jugador: muere.","Si te eliges a ti mismo, un Secuaz se convierte en el \u003cstrong>Demonio\u003c/strong>."]}]}]},{"id":"bad-moon-rising","name":"Bad Moon Rising","status":"coming-soon","groups":[]},{"id":"sects-and-violets","name":"Sects & Violets","status":"coming-soon","groups":[]}]},"en":{"locale":"en","label":"English","ui":{"brand":"Blood on the Clocktower","documentTitle":"{edition} · Public guide","metaDescription":"TV reference screen for Blood on the Clocktower: {edition}, with fantasy music and every character on the script.","ogTitle":"Blood on the Clocktower · {edition}","ogDescription":"Public reference guide for an in-person game of {edition}.","editionSelector":"Select edition","languageSelector":"Select language","comingSoon":"Coming soon","ambienceSelected":"Selected ambience","preparingAmbience":"Preparing ambience…","controls":"Global controls","play":"Play","pause":"Pause","playMusic":"Play music","pauseMusic":"Pause music","nextTrack":"Change track","volume":"Music volume","fullscreen":"Fullscreen","exitFullscreen":"Exit fullscreen","nowPlaying":"Now playing: {track}","footer":"Public guide for players"},"trackMoods":{"tavernFolk":"tavern folk","medievalDance":"medieval dance","darkFolk":"dark folk","violinLute":"violin and lute","livelyTavern":"lively tavern"},"editions":[{"id":"trouble-brewing","name":"Trouble Brewing","status":"available","groups":[{"id":"townsfolk","label":"Townsfolk","note":"","roles":[{"id":"generic-townsfolk","name":"Townsfolk","icon":"user","ability":["You have no ability. But you are still a good person! Help your town find the Demon."]},{"id":"washerwoman","name":"Washerwoman","icon":"shirt","ability":["On the first night, you learn that between 2 players, 1 is a specific \u003cstrong>Townsfolk\u003c/strong>."]},{"id":"librarian","name":"Librarian","icon":"book-marked","ability":["On the first night, you learn that between 2 players, 1 is a specific \u003cstrong>Outsider\u003c/strong>. (Or that none are in play.)"]},{"id":"investigator","name":"Investigator","icon":"search","ability":["On the first night, you learn that between 2 players, 1 is a specific \u003cstrong>Minion\u003c/strong>."]},{"id":"chef","name":"Chef","icon":"chef-hat","ability":["On the first night, you learn how many pairs of evil players are sitting next to each other."]},{"id":"empath","name":"Empath","icon":"hand-heart","ability":["Each night, you learn how many of your 2 alive neighbours are evil."]},{"id":"fortune-teller","name":"Fortune Teller","icon":"eye","ability":["Each night, choose 2 players: you learn if either is the \u003cstrong>Demon\u003c/strong>. One good player may appear as the \u003cstrong>Demon\u003c/strong>, even though they are not."]},{"id":"undertaker","name":"Undertaker","icon":"shovel","ability":["Each night, except the first, you learn the role of the player executed today."]},{"id":"monk","name":"Monk","icon":"church","ability":["Each night, except the first, choose another player: the \u003cstrong>Demon\u003c/strong> cannot kill them tonight."]},{"id":"ravenkeeper","name":"Ravenkeeper","icon":"bird","ability":["If you die at night, choose a player and learn their role."]},{"id":"soldier","name":"Soldier","icon":"shield","ability":["If the \u003cstrong>Demon\u003c/strong> chooses you as their victim, they cannot kill you."]},{"id":"virgin","name":"Virgin","icon":"flower-2","ability":["The first time you are nominated, if the nominator is a \u003cstrong>Townsfolk\u003c/strong>, they are executed immediately. Otherwise, nothing happens and you lose this ability."]},{"id":"slayer","name":"Slayer","icon":"crosshair","ability":["Once per game, during the day, publicly choose a player: if they are the \u003cstrong>Demon\u003c/strong>, they die."]},{"id":"mayor","name":"Mayor","icon":"landmark","ability":["If only 3 players are alive and there is no execution, your team wins. If you die at night, another player might die instead."]}]},{"id":"outsiders","label":"Outsiders","note":"","roles":[{"id":"saint","name":"Saint","icon":"sparkles","ability":["If the town executes you, your team loses."]},{"id":"recluse","name":"Recluse","icon":"castle","ability":["Abilities that investigate you may see you as \u003cstrong>evil\u003c/strong>, a \u003cstrong>Minion\u003c/strong> or a \u003cstrong>Demon\u003c/strong>, even though you are not, even while dead."]},{"id":"drunk","name":"Drunk","icon":"beer","ability":["You do not know that you are the Drunk. You think you are a Townsfolk character, but you are not."]},{"id":"butler","name":"Butler","icon":"bell-ring","ability":["Each night, choose a player (not yourself): tomorrow you may only vote if that player also votes in that nomination."]}]},{"id":"minions","label":"Minions","note":"They do not know who the \u003cstrong>Demon\u003c/strong> is.","roles":[{"id":"scarlet-woman","name":"Scarlet Woman","icon":"flower","ability":["If 5 or more players are alive and the Demon dies, you become the Demon."]},{"id":"poisoner","name":"Poisoner","icon":"flask-conical","ability":["Each night, poison a player until the following dusk. While poisoned, their ability does not work and they may receive false information."]},{"id":"baron","name":"Baron","icon":"crown","ability":["There are extra Outsiders in play. [+2 Outsiders]"]},{"id":"spy","name":"Spy","icon":"glasses","ability":["Each night, you see the Grimoire. Abilities that investigate you may see you as \u003cstrong>good\u003c/strong>, a \u003cstrong>Townsfolk\u003c/strong> or an \u003cstrong>Outsider\u003c/strong>, even though you are not, even while dead."]}]},{"id":"demon","label":"Demon","note":"On the first night, the Demon learns which players are their \u003cstrong>Minions\u003c/strong>, but not their roles, and 3 bluff roles that are not in play.","roles":[{"id":"imp","name":"Imp","icon":"flame","ability":["Each night, except the first, choose a player: they die.","If you choose yourself, a Minion becomes the \u003cstrong>Demon\u003c/strong>."]}]}]},{"id":"bad-moon-rising","name":"Bad Moon Rising","status":"coming-soon","groups":[]},{"id":"sects-and-violets","name":"Sects & Violets","status":"coming-soon","groups":[]}]}}</script>
   <script>
-    const characters={
-      townsfolk:[
-        {name:"Aldeano",ability:"No tienes ninguna habilidad. ¡Pero sigues siendo una buena persona! Ayuda a tu pueblo a encontrar al Demonio.",icon:"user"},
-        {name:"Lavandera",ability:"La primera noche, descubres que entre 2 jugadores, 1 es un <strong>Aldeano</strong> concreto.",icon:"shirt"},
-        {name:"Bibliotecario",ability:"La primera noche, descubres que entre 2 jugadores, 1 es un <strong>Forastero</strong> concreto. (O que no hay ninguno en juego.)",icon:"book-marked"},
-        {name:"Investigador",ability:"La primera noche, descubres que entre 2 jugadores, 1 es un <strong>Secuaz</strong> concreto.",icon:"search"},
-        {name:"Chef",ability:"La primera noche, descubres cuántas parejas de jugadores malvados están sentadas juntas.",icon:"chef-hat"},
-        {name:"Empático",ability:"Cada noche, descubres cuántos de tus 2 vecinos vivos son malvados.",icon:"hand-heart"},
-        {name:"Adivino",ability:"Cada noche, elige 2 jugadores: descubres si alguno es el <strong>Demonio</strong>. Un jugador bueno puede aparecer como <strong>Demonio</strong>, aunque no lo sea.",icon:"eye"},
-        {name:"Enterrador",ability:"Cada noche, después de la primera, descubres el rol del jugador ejecutado durante el día.",icon:"shovel"},
-        {name:"Monje",ability:"Cada noche, después de la primera, elige a otro jugador: el <strong>Demonio</strong> no puede matarlo esa noche.",icon:"church"},
-        {name:"Guardacuervos",ability:"Si mueres de noche, elige un jugador y descubres su rol.",icon:"bird"},
-        {name:"Soldado",ability:"Si el <strong>Demonio</strong> te elige como víctima, no puede matarte.",icon:"shield"},
-        {name:"Virgen",ability:"La primera vez que te nominen, si quien lo hace es un <strong>Aldeano</strong>, es ejecutado inmediatamente. Si no, no ocurre nada y pierdes esta habilidad.",icon:"flower-2"},
-        {name:"Verdugo",ability:"Una vez por partida, durante el día, elige públicamente a un jugador: si es el <strong>Demonio</strong>, muere.",icon:"crosshair"},
-        {name:"Alcalde",ability:"Si solo quedan 3 jugadores vivos y no hay ejecución, tu equipo gana. Si mueres de noche, otro jugador podría morir en tu lugar.",icon:"landmark"}
-      ],
-      outsiders:[
-        {name:"Santo",ability:"Si el pueblo te ejecuta, tu equipo pierde.",icon:"sparkles"},
-        {name:"Recluso",ability:"Las habilidades que te investiguen podrían verte como <strong>malvado</strong>, <strong>Secuaz</strong> o <strong>Demonio</strong>, aunque no lo seas, incluso muerto.",icon:"castle"},
-        {name:"Borracho",ability:"No sabes que eres el Borracho. Crees que eres un personaje Aldeano, pero no lo eres.",icon:"beer"},
-        {name:"Mayordomo",ability:"Cada noche, elige a un jugador (no tú): mañana solo puedes votar si ese jugador también vota en esa nominación.",icon:"bell-ring"}
-      ],
-      minions:[
-        {name:"Mujer Escarlata",ability:"Si hay 5 o más jugadores vivos y el Demonio muere, tú te conviertes en el Demonio.",icon:"flower"},
-        {name:"Envenenador",ability:"Cada noche, envenenas a un jugador hasta el anochecer siguiente. Envenenado: su habilidad no funciona y puede recibir información falsa.",icon:"flask-conical"},
-        {name:"Barón",ability:"Hay Forasteros extra en juego. [+2 Forasteros]",icon:"crown"},
-        {name:"Espía",ability:"Cada noche, ves el Grimorio. Las habilidades que te investiguen podrían verte como <strong>bueno</strong>, <strong>Aldeano</strong> o <strong>Forastero</strong>, aunque no lo seas, incluso muerto.",icon:"glasses"}
-      ],
-      demon:[{name:"Diablo",ability:"<span class=\"ability-line\">Cada noche, después de la primera, elige a un jugador: muere.</span><span class=\"ability-line\">Si te eliges a ti mismo, un Secuaz se convierte en el <strong>Demonio</strong>.</span>",icon:"flame"}]
-    };
-    const tracks=[
-      {name:"Never Go Full Bard · taberna folk",artist:"HitCtrl",license:"CC BY 3.0",url:"https://opengameart.org/sites/default/files/RPG%20Never%20Go%20Full%20Bard.mp3"},
-      {name:"Minstrel Dance · danza medieval",artist:"RandomMind",license:"CC0",url:"https://opengameart.org/sites/default/files/Minstrel_Dance_0.mp3"},
-      {name:"The Enchanted Forest of Min · folk oscuro",artist:"HitCtrl",license:"CC BY 3.0",url:"https://opengameart.org/sites/default/files/RPG%20-%20The%20Enchanted%20Forest%20of%20Min.mp3"},
-      {name:"Woodland Fantasy · violín y laúd",artist:"Matthew Pablo",license:"CC BY 3.0",url:"https://lpc.opengameart.org/sites/default/files/Woodland%20Fantasy_0.mp3"},
-      {name:"Dragon Tail Tavern · taberna animada",artist:"Jan125",license:"CC BY 4.0",url:"https://opengameart.org/sites/default/files/dragontailtavern.ogg"}
-    ];
-    const card=(role,featured=false)=>`<article class="card${featured?' featured':''}"><div class="heading"><span class="icon" aria-hidden="true"><i data-lucide="${role.icon}"></i></span><h3>${role.name}</h3></div><p>${role.ability}</p></article>`;
-    Object.entries(characters).forEach(([group,roles])=>document.getElementById(group).innerHTML=roles.map(r=>card(r,group==='demon')).join(''));
-    if(window.lucide)lucide.createIcons({attrs:{'stroke-width':1.8}});
+function resolveLocale({storedLocale, browserLanguage, supportedLocales, defaultLocale = 'es'}) {
+  if (supportedLocales.includes(storedLocale)) return storedLocale;
+  const normalized = String(browserLanguage || '').toLowerCase();
+  return normalized.startsWith('en') && supportedLocales.includes('en') ? 'en' : defaultLocale;
+}
 
-    let trackIndex=Math.floor(Math.random()*tracks.length),playing=false,toastTimer=null,failed=0,userPaused=false,awaitingGesture=false;
-    const audio=new Audio(),playButton=document.getElementById('play'),nextButton=document.getElementById('next'),trackName=document.getElementById('track-name'),toast=document.getElementById('track-toast');
-    audio.preload='auto';audio.volume=.18;audio.autoplay=true;
-    function refreshIcons(){if(window.lucide)lucide.createIcons({attrs:{'stroke-width':2}})}
-    function setPlayState(active){playing=active;playButton.innerHTML=`<i data-lucide="${active?'pause':'play'}"></i><span>${active?'Pausar':'Reproducir'}</span>`;playButton.setAttribute('aria-label',active?'Pausar música':'Reproducir música');playButton.title=active?'Pausar música':'Reproducir música';refreshIcons()}
-    function showTrack(showToast=false){const track=tracks[trackIndex];trackName.textContent=track.name;if(showToast){toast.textContent=`Ahora suena: ${track.name}`;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),2400)}}
-    function loadTrack(showToast=true){audio.src=tracks[trackIndex].url;audio.load();showTrack(showToast)}
-    async function playCurrent(){if(userPaused)return;try{await audio.play();awaitingGesture=false}catch{awaitingGesture=true}}
-    async function toggleMusic(){if(playing){userPaused=true;audio.pause()}else{userPaused=false;if(!audio.src)loadTrack(false);await playCurrent()}}
-    async function nextTrack(automatic=false){const shouldPlay=automatic||playing||!userPaused;trackIndex=(trackIndex+1)%tracks.length;loadTrack();if(shouldPlay)await playCurrent()}
-    audio.addEventListener('play',()=>{failed=0;setPlayState(true)});
-    audio.addEventListener('pause',()=>{if(!audio.ended||userPaused)setPlayState(false)});
-    audio.addEventListener('ended',()=>nextTrack(true));
-    audio.addEventListener('error',()=>{if(failed++<tracks.length)nextTrack(true);else setPlayState(false)});
-    const startAfterGesture=e=>{if(e.target instanceof Element&&e.target.closest('#play'))return;if(awaitingGesture&&!userPaused)playCurrent()};
-    document.addEventListener('pointerdown',startAfterGesture);document.addEventListener('keydown',startAfterGesture);
-    loadTrack(false);playCurrent();playButton.addEventListener('click',toggleMusic);nextButton.addEventListener('click',()=>nextTrack(false));
-    document.getElementById('volume').addEventListener('input',e=>{document.getElementById('volume-value').textContent=e.target.value+'%';audio.volume=Number(e.target.value)/100});
-    document.getElementById('fullscreen').addEventListener('click',async()=>{if(document.fullscreenElement)await document.exitFullscreen();else await document.documentElement.requestFullscreen()});
-    document.addEventListener('fullscreenchange',()=>{const button=document.getElementById('fullscreen');button.innerHTML=`<i data-lucide="${document.fullscreenElement?'minimize':'maximize'}"></i><span>${document.fullscreenElement?'Salir':'Pantalla completa'}</span>`;button.setAttribute('aria-label',document.fullscreenElement?'Salir de pantalla completa':'Pantalla completa');refreshIcons()});
-    let idleTimer;const wake=()=>{document.getElementById('app').classList.remove('idle');clearTimeout(idleTimer);idleTimer=setTimeout(()=>document.getElementById('app').classList.add('idle'),4000)};addEventListener('mousemove',wake);addEventListener('touchstart',wake);wake();
+function resolveEdition({storedEdition, editions, defaultEdition = 'trouble-brewing'}) {
+  const stored = editions.find(edition => edition.id === storedEdition);
+  return stored?.status === 'available' ? stored.id : defaultEdition;
+}
+
+(() => {
+  'use strict';
+
+  const bundles = JSON.parse(document.getElementById('i18n-data').textContent);
+  const localeIds = Object.keys(bundles);
+  const defaultLocale = 'es';
+  const defaultEdition = 'trouble-brewing';
+  const storageKeys = {locale: 'botc-tv.locale', edition: 'botc-tv.edition'};
+
+  const readPreference = key => {
+    try { return localStorage.getItem(key); } catch { return null; }
+  };
+  const savePreference = (key, value) => {
+    try { localStorage.setItem(key, value); } catch { /* file:// may deny storage */ }
+  };
+  const browserLanguage = navigator.languages?.[0] || navigator.language || '';
+  const storedLocale = readPreference(storageKeys.locale);
+  let currentLocale = resolveLocale({storedLocale, browserLanguage, supportedLocales: localeIds, defaultLocale});
+
+  const bundle = () => bundles[currentLocale];
+  const editionById = (locale, id) => bundles[locale].editions.find(edition => edition.id === id);
+  const storedEdition = readPreference(storageKeys.edition);
+  let currentEdition = resolveEdition({storedEdition, editions: bundles[currentLocale].editions, defaultEdition});
+
+  const elements = {
+    app: document.getElementById('app'),
+    brand: document.getElementById('brand-name'),
+    heading: document.getElementById('page-heading'),
+    editionTrigger: document.getElementById('edition-trigger'),
+    editionName: document.getElementById('edition-name'),
+    editionMenu: document.getElementById('edition-menu'),
+    languageTrigger: document.getElementById('language-trigger'),
+    languageCode: document.getElementById('language-code'),
+    languageMenu: document.getElementById('language-menu'),
+    ambienceLabel: document.getElementById('ambience-label'),
+    controls: document.querySelector('.controls'),
+    play: document.getElementById('play'),
+    next: document.getElementById('next'),
+    volume: document.getElementById('volume'),
+    volumeValue: document.getElementById('volume-value'),
+    volumeBox: document.querySelector('.volume'),
+    fullscreen: document.getElementById('fullscreen'),
+    trackName: document.getElementById('track-name'),
+    toast: document.getElementById('track-toast'),
+    footer: document.getElementById('footer-copy'),
+    footerEdition: document.getElementById('footer-edition'),
+    metaDescription: document.getElementById('meta-description'),
+    ogTitle: document.getElementById('og-title'),
+    ogDescription: document.getElementById('og-description')
+  };
+
+  const tracks = [
+    {title: 'Never Go Full Bard', mood: 'tavernFolk', artist: 'HitCtrl', license: 'CC BY 3.0', url: 'https://opengameart.org/sites/default/files/RPG%20Never%20Go%20Full%20Bard.mp3'},
+    {title: 'Minstrel Dance', mood: 'medievalDance', artist: 'RandomMind', license: 'CC0', url: 'https://opengameart.org/sites/default/files/Minstrel_Dance_0.mp3'},
+    {title: 'The Enchanted Forest of Min', mood: 'darkFolk', artist: 'HitCtrl', license: 'CC BY 3.0', url: 'https://opengameart.org/sites/default/files/RPG%20-%20The%20Enchanted%20Forest%20of%20Min.mp3'},
+    {title: 'Woodland Fantasy', mood: 'violinLute', artist: 'Matthew Pablo', license: 'CC BY 3.0', url: 'https://lpc.opengameart.org/sites/default/files/Woodland%20Fantasy_0.mp3'},
+    {title: 'Dragon Tail Tavern', mood: 'livelyTavern', artist: 'Jan125', license: 'CC BY 4.0', url: 'https://opengameart.org/sites/default/files/dragontailtavern.ogg'}
+  ];
+
+  const audio = new Audio();
+  audio.id = 'ambient-audio';
+  audio.className = 'player';
+  document.body.append(audio);
+  let trackIndex = Math.floor(Math.random() * tracks.length);
+  let playing = false;
+  let toastTimer = null;
+  let failed = 0;
+  let userPaused = false;
+  let awaitingGesture = false;
+  let idleTimer = null;
+
+  audio.preload = 'auto';
+  audio.volume = .18;
+  audio.autoplay = true;
+
+  const escapeHtml = value => String(value)
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#039;');
+  const format = (template, values) => Object.entries(values)
+    .reduce((text, [key, value]) => text.replaceAll(`{${key}}`, value), template);
+  const refreshIcons = () => {
+    if (window.lucide) window.lucide.createIcons({attrs: {'stroke-width': 2}});
+  };
+  const selectedEdition = () => editionById(currentLocale, currentEdition) || editionById(currentLocale, defaultEdition);
+  const trackLabel = track => `${track.title} · ${bundle().trackMoods[track.mood]}`;
+
+  function cardMarkup(role, featured = false) {
+    const headingId = `role-${role.id}`;
+    const lines = role.ability.map(line => `<span class="ability-line">${line}</span>`).join('');
+    return `<article class="card${featured ? ' featured' : ''}" aria-labelledby="${headingId}"><div class="heading"><span class="icon" aria-hidden="true"><i data-lucide="${escapeHtml(role.icon)}"></i></span><h3 id="${headingId}">${escapeHtml(role.name)}</h3></div><p>${lines}</p></article>`;
+  }
+
+  function menuItem({label, selected, disabled = false, badge = ''}) {
+    return `<button type="button" role="menuitemradio" aria-checked="${selected}"${disabled ? ' aria-disabled="true" disabled' : ''}><span class="menu-check" aria-hidden="true">${selected ? '✓' : ''}</span><span class="menu-label">${escapeHtml(label)}</span>${badge ? `<span class="coming-soon">${escapeHtml(badge)}</span>` : ''}</button>`;
+  }
+
+  function renderMenus() {
+    const data = bundle();
+    elements.editionMenu.innerHTML = data.editions.map(edition => menuItem({
+      label: edition.name,
+      selected: edition.id === currentEdition,
+      disabled: edition.status !== 'available',
+      badge: edition.status === 'coming-soon' ? data.ui.comingSoon : ''
+    })).join('');
+    [...elements.editionMenu.querySelectorAll('button')].forEach((button, index) => {
+      const edition = data.editions[index];
+      if (edition.status === 'available') button.addEventListener('click', () => selectEdition(edition.id));
+    });
+
+    elements.languageMenu.innerHTML = localeIds.map(locale => menuItem({
+      label: bundles[locale].label,
+      selected: locale === currentLocale
+    })).join('');
+    [...elements.languageMenu.querySelectorAll('button')].forEach((button, index) => {
+      button.dataset.locale = localeIds[index];
+      button.addEventListener('click', event => selectLocale(event.currentTarget.dataset.locale));
+    });
+  }
+
+  function renderGroups(edition) {
+    ['townsfolk', 'outsiders', 'minions', 'demon'].forEach(groupId => {
+      const group = edition.groups.find(candidate => candidate.id === groupId);
+      const title = document.getElementById(`${groupId}-title`);
+      const note = document.getElementById(`${groupId}-note`);
+      const grid = document.getElementById(groupId);
+      title.textContent = group.label;
+      note.innerHTML = group.note;
+      note.hidden = !group.note;
+      grid.innerHTML = group.roles.map(role => cardMarkup(role, groupId === 'demon')).join('');
+    });
+  }
+
+  function setPlayState(active) {
+    playing = active;
+    const ui = bundle().ui;
+    elements.play.innerHTML = `<i data-lucide="${active ? 'pause' : 'play'}"></i><span>${active ? ui.pause : ui.play}</span>`;
+    const label = active ? ui.pauseMusic : ui.playMusic;
+    elements.play.setAttribute('aria-label', label);
+    elements.play.title = label;
+    refreshIcons();
+  }
+
+  function updateFullscreenLabel() {
+    const active = Boolean(document.fullscreenElement);
+    const ui = bundle().ui;
+    const label = active ? ui.exitFullscreen : ui.fullscreen;
+    elements.fullscreen.innerHTML = `<i data-lucide="${active ? 'minimize' : 'maximize'}"></i><span>${label}</span>`;
+    elements.fullscreen.setAttribute('aria-label', label);
+    elements.fullscreen.title = label;
+    refreshIcons();
+  }
+
+  function showTrack(showToast = false) {
+    const label = trackLabel(tracks[trackIndex]);
+    elements.trackName.textContent = label;
+    if (showToast) {
+      elements.toast.textContent = format(bundle().ui.nowPlaying, {track: label});
+      elements.toast.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => elements.toast.classList.remove('show'), 2400);
+    }
+  }
+
+  function renderApp() {
+    closeMenus();
+    const data = bundle();
+    const edition = selectedEdition();
+    const ui = data.ui;
+    const title = format(ui.documentTitle, {edition: edition.name});
+
+    document.documentElement.lang = currentLocale;
+    document.documentElement.dataset.locale = currentLocale;
+    document.title = title;
+    elements.metaDescription.content = format(ui.metaDescription, {edition: edition.name});
+    elements.ogTitle.content = format(ui.ogTitle, {edition: edition.name});
+    elements.ogDescription.content = format(ui.ogDescription, {edition: edition.name});
+    elements.brand.textContent = ui.brand;
+    elements.heading.textContent = `${ui.brand} · ${edition.name}`;
+    elements.editionName.textContent = edition.name;
+    elements.editionTrigger.setAttribute('aria-label', `${ui.editionSelector}: ${edition.name}`);
+    elements.languageCode.textContent = currentLocale.toUpperCase();
+    elements.languageTrigger.setAttribute('aria-label', `${ui.languageSelector}: ${data.label}`);
+    elements.ambienceLabel.textContent = ui.ambienceSelected;
+    elements.controls.setAttribute('aria-label', ui.controls);
+    elements.next.setAttribute('aria-label', ui.nextTrack);
+    elements.next.title = ui.nextTrack;
+    elements.volumeBox.title = ui.volume;
+    elements.volume.setAttribute('aria-label', ui.volume);
+    elements.footer.textContent = ui.footer;
+    elements.footerEdition.textContent = edition.name;
+    renderMenus();
+    renderGroups(edition);
+    setPlayState(playing);
+    updateFullscreenLabel();
+    if (audio.src) showTrack(false); else elements.trackName.textContent = ui.preparingAmbience;
+    refreshIcons();
+  }
+
+  function closeMenu(trigger, menu, restoreFocus = false) {
+    const wasOpen = menu.classList.contains('open');
+    menu.classList.remove('open');
+    trigger.setAttribute('aria-expanded', 'false');
+    if (wasOpen && restoreFocus) trigger.focus();
+  }
+
+  function closeMenus(restoreFocus = false) {
+    closeMenu(elements.editionTrigger, elements.editionMenu, restoreFocus);
+    closeMenu(elements.languageTrigger, elements.languageMenu, restoreFocus);
+  }
+
+  function openMenu(trigger, menu) {
+    closeMenus();
+    menu.classList.add('open');
+    trigger.setAttribute('aria-expanded', 'true');
+  }
+
+  function toggleMenu(trigger, menu) {
+    if (menu.classList.contains('open')) closeMenu(trigger, menu);
+    else openMenu(trigger, menu);
+  }
+
+  function focusMenuItem(menu, position = 'first') {
+    const items = [...menu.querySelectorAll('button:not(:disabled)')];
+    if (!items.length) return;
+    (position === 'last' ? items.at(-1) : items[0]).focus();
+  }
+
+  function handleMenuKeyboard(event, trigger, menu) {
+    const items = [...menu.querySelectorAll('button:not(:disabled)')];
+    const currentIndex = items.indexOf(document.activeElement);
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      closeMenu(trigger, menu, true);
+    } else if (event.key === 'ArrowDown') {
+      event.preventDefault();
+      items[(currentIndex + 1 + items.length) % items.length]?.focus();
+    } else if (event.key === 'ArrowUp') {
+      event.preventDefault();
+      items[(currentIndex - 1 + items.length) % items.length]?.focus();
+    } else if (event.key === 'Home') {
+      event.preventDefault();
+      items[0]?.focus();
+    } else if (event.key === 'End') {
+      event.preventDefault();
+      items.at(-1)?.focus();
+    }
+  }
+
+  function wireDropdown(trigger, menu) {
+    trigger.addEventListener('click', () => toggleMenu(trigger, menu));
+    trigger.addEventListener('keydown', event => {
+      if (['ArrowDown', 'Enter', ' '].includes(event.key)) {
+        event.preventDefault();
+        openMenu(trigger, menu);
+        focusMenuItem(menu);
+      } else if (event.key === 'ArrowUp') {
+        event.preventDefault();
+        openMenu(trigger, menu);
+        focusMenuItem(menu, 'last');
+      }
+    });
+    menu.addEventListener('keydown', event => handleMenuKeyboard(event, trigger, menu));
+  }
+
+  function selectLocale(locale) {
+    if (!localeIds.includes(locale) || locale === currentLocale) {
+      closeMenus(true);
+      return;
+    }
+    currentLocale = locale;
+    currentEdition = resolveEdition({storedEdition: currentEdition, editions: bundles[currentLocale].editions, defaultEdition});
+    savePreference(storageKeys.locale, currentLocale);
+    savePreference(storageKeys.edition, currentEdition);
+    renderApp();
+    elements.languageTrigger.focus();
+  }
+
+  function selectEdition(editionId) {
+    if (editionById(currentLocale, editionId)?.status !== 'available') return;
+    currentEdition = editionId;
+    savePreference(storageKeys.edition, currentEdition);
+    renderApp();
+    elements.editionTrigger.focus();
+  }
+
+  function loadTrack(showToast = true) {
+    audio.src = tracks[trackIndex].url;
+    audio.load();
+    showTrack(showToast);
+  }
+
+  async function playCurrent() {
+    if (userPaused) return;
+    try {
+      await audio.play();
+      awaitingGesture = false;
+    } catch {
+      awaitingGesture = true;
+    }
+  }
+
+  async function toggleMusic() {
+    if (playing) {
+      userPaused = true;
+      audio.pause();
+    } else {
+      userPaused = false;
+      if (!audio.src) loadTrack(false);
+      await playCurrent();
+    }
+  }
+
+  async function nextTrack(automatic = false) {
+    const shouldPlay = automatic || playing || !userPaused;
+    trackIndex = (trackIndex + 1) % tracks.length;
+    loadTrack();
+    if (shouldPlay) await playCurrent();
+  }
+
+  wireDropdown(elements.editionTrigger, elements.editionMenu);
+  wireDropdown(elements.languageTrigger, elements.languageMenu);
+  document.addEventListener('pointerdown', event => {
+    if (!event.target.closest('.dropdown')) closeMenus();
+    if (!event.target.closest('#play') && awaitingGesture && !userPaused) playCurrent();
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') closeMenus(true);
+    if (awaitingGesture && !userPaused) playCurrent();
+  });
+
+  audio.addEventListener('play', () => { failed = 0; setPlayState(true); });
+  audio.addEventListener('pause', () => { if (!audio.ended || userPaused) setPlayState(false); });
+  audio.addEventListener('ended', () => nextTrack(true));
+  audio.addEventListener('error', () => { if (failed++ < tracks.length) nextTrack(true); else setPlayState(false); });
+  elements.play.addEventListener('click', toggleMusic);
+  elements.next.addEventListener('click', () => nextTrack(false));
+  elements.volume.addEventListener('input', event => {
+    elements.volumeValue.textContent = `${event.target.value}%`;
+    audio.volume = Number(event.target.value) / 100;
+  });
+  elements.fullscreen.addEventListener('click', async () => {
+    if (document.fullscreenElement) await document.exitFullscreen();
+    else await document.documentElement.requestFullscreen();
+  });
+  document.addEventListener('fullscreenchange', updateFullscreenLabel);
+
+  const wake = () => {
+    elements.app.classList.remove('idle');
+    clearTimeout(idleTimer);
+    idleTimer = setTimeout(() => elements.app.classList.add('idle'), 4000);
+  };
+  addEventListener('mousemove', wake);
+  addEventListener('touchstart', wake);
+
+  renderApp();
+  document.documentElement.dataset.ready = 'true';
+  loadTrack(false);
+  playCurrent();
+  wake();
+})();
   </script>
 </body>
 </html>
