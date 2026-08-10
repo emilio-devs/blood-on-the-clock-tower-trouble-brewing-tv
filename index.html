@@ -100,17 +100,23 @@
     Object.entries(characters).forEach(([group,roles])=>document.getElementById(group).innerHTML=roles.map(r=>card(r,group==='demon')).join(''));
     if(window.lucide)lucide.createIcons({attrs:{'stroke-width':1.8}});
 
-    let trackIndex=Math.floor(Math.random()*tracks.length),playing=false,toastTimer=null,failed=0;
+    let trackIndex=Math.floor(Math.random()*tracks.length),playing=false,toastTimer=null,failed=0,userPaused=false,awaitingGesture=false;
     const audio=new Audio(),playButton=document.getElementById('play'),nextButton=document.getElementById('next'),trackName=document.getElementById('track-name'),toast=document.getElementById('track-toast');
-    audio.preload='metadata';audio.volume=.18;
+    audio.preload='auto';audio.volume=.18;audio.autoplay=true;
     function refreshIcons(){if(window.lucide)lucide.createIcons({attrs:{'stroke-width':2}})}
     function setPlayState(active){playing=active;playButton.innerHTML=`<i data-lucide="${active?'pause':'play'}"></i><span>${active?'Pausar':'Reproducir'}</span>`;playButton.setAttribute('aria-label',active?'Pausar música':'Reproducir música');playButton.title=active?'Pausar música':'Reproducir música';refreshIcons()}
     function showTrack(showToast=false){const track=tracks[trackIndex];trackName.textContent=track.name;if(showToast){toast.textContent=`Ahora suena: ${track.name}`;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),2400)}}
-    function loadTrack(){audio.src=tracks[trackIndex].url;audio.load();showTrack(true)}
-    async function toggleMusic(){try{if(!audio.src)loadTrack();if(playing)audio.pause();else await audio.play()}catch{toast.textContent='No se pudo cargar la música. Comprueba la conexión.';toast.classList.add('show')}}
-    async function nextTrack(automatic=false){const resume=playing;trackIndex=(trackIndex+1)%tracks.length;loadTrack();if(resume){try{await audio.play()}catch{if(automatic&&failed++<tracks.length)nextTrack(true)}}}
-    audio.addEventListener('play',()=>{failed=0;setPlayState(true)});audio.addEventListener('pause',()=>setPlayState(false));audio.addEventListener('ended',()=>nextTrack(true));audio.addEventListener('error',()=>{if(failed++<tracks.length)nextTrack(true)});
-    showTrack();playButton.addEventListener('click',toggleMusic);nextButton.addEventListener('click',()=>nextTrack(false));
+    function loadTrack(showToast=true){audio.src=tracks[trackIndex].url;audio.load();showTrack(showToast)}
+    async function playCurrent(){if(userPaused)return;try{await audio.play();awaitingGesture=false}catch{awaitingGesture=true}}
+    async function toggleMusic(){if(playing){userPaused=true;audio.pause()}else{userPaused=false;if(!audio.src)loadTrack(false);await playCurrent()}}
+    async function nextTrack(automatic=false){const shouldPlay=automatic||playing||!userPaused;trackIndex=(trackIndex+1)%tracks.length;loadTrack();if(shouldPlay)await playCurrent()}
+    audio.addEventListener('play',()=>{failed=0;setPlayState(true)});
+    audio.addEventListener('pause',()=>{if(!audio.ended||userPaused)setPlayState(false)});
+    audio.addEventListener('ended',()=>nextTrack(true));
+    audio.addEventListener('error',()=>{if(failed++<tracks.length)nextTrack(true);else setPlayState(false)});
+    const startAfterGesture=e=>{if(e.target instanceof Element&&e.target.closest('#play'))return;if(awaitingGesture&&!userPaused)playCurrent()};
+    document.addEventListener('pointerdown',startAfterGesture);document.addEventListener('keydown',startAfterGesture);
+    loadTrack(false);playCurrent();playButton.addEventListener('click',toggleMusic);nextButton.addEventListener('click',()=>nextTrack(false));
     document.getElementById('volume').addEventListener('input',e=>{document.getElementById('volume-value').textContent=e.target.value+'%';audio.volume=Number(e.target.value)/100});
     document.getElementById('fullscreen').addEventListener('click',async()=>{if(document.fullscreenElement)await document.exitFullscreen();else await document.documentElement.requestFullscreen()});
     document.addEventListener('fullscreenchange',()=>{const button=document.getElementById('fullscreen');button.innerHTML=`<i data-lucide="${document.fullscreenElement?'minimize':'maximize'}"></i><span>${document.fullscreenElement?'Salir':'Pantalla completa'}</span>`;button.setAttribute('aria-label',document.fullscreenElement?'Salir de pantalla completa':'Pantalla completa');refreshIcons()});
