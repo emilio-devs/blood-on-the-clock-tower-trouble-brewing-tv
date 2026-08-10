@@ -29,6 +29,26 @@
     footer{display:flex;align-items:center;padding:0 clamp(12px,1.1vw,22px);border-top:1px solid rgba(185,154,89,.28);color:#c3b8a5;background:rgba(7,7,10,.8);font-size:clamp(10px,.7vw,14px)}footer b{margin-right:4px;color:var(--gold);font-size:1.3em}.foot-right{margin-left:auto;color:#8d816e}.player{position:fixed;width:1px;height:1px;left:-10px;bottom:-10px;opacity:0;pointer-events:none}.track-toast{position:absolute;z-index:5;left:50%;top:calc(clamp(64px,7.9vh,86px) + 12px);transform:translate(-50%,-8px);padding:8px 15px;border:1px solid rgba(185,154,89,.48);border-radius:4px;background:rgba(8,7,11,.94);color:#eadfc9;font-size:13px;letter-spacing:.03em;opacity:0;pointer-events:none;transition:opacity .22s,transform .22s}.track-toast.show{opacity:1;transform:translate(-50%,0)}.idle{cursor:none}.idle .controls{opacity:.2}
     @media(max-width:1500px){header{grid-template-columns:minmax(270px,1fr) auto}.now{display:none}.board{grid-template-columns:minmax(0,2.04fr) minmax(350px,1fr)}.controls button span{display:none}.controls button:first-child,.controls .fullscreen{width:40px;padding:0}}
     @media(max-height:820px){#app{grid-template-rows:61px 1fr 21px}.board{padding-top:4px;padding-bottom:4px}.section-title{min-height:19px}.card{padding-top:5px;padding-bottom:5px}.heading{margin-bottom:2px}.card p{line-height:1.1}.right .card p{line-height:1.08}.right{grid-template-rows:1fr 1fr .57fr;gap:3px}}
+    @media(max-width:1199px){
+      html,body{height:auto;min-height:100%;overflow:auto}#app{width:100%;height:auto;min-height:100dvh;overflow:visible;grid-template-rows:auto auto auto}
+      header{grid-template-columns:minmax(0,1fr) auto;min-height:70px}.board{grid-template-columns:1fr;overflow:visible;padding:12px;gap:14px}
+      .section,.right{min-height:auto}.right{grid-template-rows:auto;gap:14px}.grid,.town .grid,.right .grid,.right .demon .grid{flex:none;grid-template-rows:none;grid-auto-rows:auto}
+      .town .grid{grid-template-columns:repeat(3,minmax(210px,1fr))}.town .card:nth-last-child(2){grid-column:auto}.right .grid{grid-template-columns:repeat(2,minmax(240px,1fr))}
+      .card,.right .card{min-height:clamp(105px,14vw,132px);height:auto;padding:11px 13px}.card p,.right .card p,.featured p{font-size:14px!important;line-height:1.34!important}.card h3,.right .card h3{font-size:17px}.section-title{min-height:30px}.section-title h2{font-size:14px}
+      footer{min-height:34px;padding:7px 14px;flex-wrap:wrap;gap:3px 10px}.foot-right{margin-left:auto}
+    }
+    @media(max-width:820px){
+      .town .grid,.right .grid{grid-template-columns:repeat(2,minmax(220px,1fr))}.card,.right .card{min-height:112px}
+    }
+    @media(max-width:600px){
+      header{grid-template-columns:1fr;padding:12px 14px;gap:11px}.brand{justify-content:center}.brand p{font-size:14px;letter-spacing:.08em}.brand h1{font-size:11px;letter-spacing:.22em}.moon{width:42px}.now{display:none}
+      .controls{width:100%;justify-content:center;flex-wrap:wrap;gap:7px}.controls button,.volume{height:42px}.controls button:first-child,.controls .fullscreen,.controls .square{width:42px}.volume{flex:1 1 145px;max-width:210px}.volume input{width:min(25vw,90px)}
+      .board{padding:10px;gap:16px}.town .grid,.right .grid{grid-template-columns:1fr;gap:9px}.right{gap:16px}
+      .card,.right .card{min-height:0;padding:14px 15px}.heading,.right .heading{margin-bottom:8px}.icon{width:34px}.card h3,.right .card h3{font-size:18px;line-height:1.12}.card p,.right .card p,.featured p{font-size:15px!important;line-height:1.42!important}
+      .featured{display:block}.featured .heading{display:flex;flex-direction:row;margin-bottom:8px;text-align:left}.featured .icon{width:36px}.featured h3{font-size:19px!important}.featured p{margin:0}.section-title{min-height:34px}.section-title h2{font-size:15px}
+      footer{justify-content:center;text-align:center}.foot-right{width:100%;margin-left:0}
+    }
+    @media(max-width:380px){.brand p{font-size:12px}.brand h1{font-size:10px}.controls{gap:5px}.volume{flex-basis:130px}.card,.right .card{padding:13px}.card p,.right .card p,.featured p{font-size:14.5px!important}}
     @media(prefers-reduced-motion:reduce){.mist{animation:none}}
   </style>
 </head>
