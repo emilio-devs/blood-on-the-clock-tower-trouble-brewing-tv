@@ -4,12 +4,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Trouble Brewing · Guía pública</title>
-  <meta id="meta-description" name="description" content="Pantalla TV de referencia pública para Blood on the Clocktower: Trouble Brewing, con música de fantasía y los 23 personajes.">
-  <meta id="og-title" property="og:title" content="Blood on the Clocktower · Trouble Brewing">
-  <meta id="og-description" property="og:description" content="Guía pública para una partida presencial de Trouble Brewing.">
+  <title>Blood on the Clocktower · Guía de juego</title>
+  <meta id="meta-description" name="description" content="Guía multilingüe para Blood on the Clocktower con personajes, habilidades y música ambiental para sus tres ediciones base.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://emilio-devs.github.io/bloodontheclocktower/">
+  <meta id="og-title" property="og:title" content="Blood on the Clocktower · Guía de juego">
+  <meta id="og-description" property="og:description" content="Guía multilingüe para acompañar partidas presenciales de Blood on the Clocktower.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://emilio-devs.github.io/blood-on-the-clock-tower-trouble-brewing-tv/og.png">
+  <meta property="og:url" content="https://emilio-devs.github.io/bloodontheclocktower/">
+  <meta property="og:image" content="https://emilio-devs.github.io/bloodontheclocktower/og.png">
   <style>
     :root{--cream:#f2e8d2;--muted:#d0c6b4;--gold:#b99a59;--town:#74b9e8;--out:#57cec8;--min:#e57c47;--demon:#ef4350}
     *{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden}html[data-ready="false"] body{visibility:hidden}body{background:#07070a;color:var(--cream);font-family:"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased}button,input{font:inherit}button{color:inherit}.visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
@@ -57,7 +60,7 @@
   <main id="app">
     <div class="mist" aria-hidden="true"></div>
     <header>
-      <div class="brand"><div class="moon" aria-hidden="true">☾</div><div class="brand-copy"><p id="brand-name">Blood on the Clocktower</p><h1 class="visually-hidden" id="page-heading">Blood on the Clocktower · Trouble Brewing</h1><div class="dropdown edition-picker"><button id="edition-trigger" class="edition-trigger" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="edition-menu"><span id="edition-name">Trouble Brewing</span><i data-lucide="chevron-down" aria-hidden="true"></i></button><div id="edition-menu" class="dropdown-menu edition-menu" role="menu"></div></div></div></div>
+      <div class="brand"><div class="moon" aria-hidden="true">☾</div><div class="brand-copy"><p id="brand-name">Blood on the Clocktower</p><h1 class="visually-hidden" id="page-heading">Blood on the Clocktower · Guía de juego</h1><div class="dropdown edition-picker"><button id="edition-trigger" class="edition-trigger" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="edition-menu"><span id="edition-name">Trouble Brewing</span><i data-lucide="chevron-down" aria-hidden="true"></i></button><div id="edition-menu" class="dropdown-menu edition-menu" role="menu"></div></div></div></div>
       <div class="now"><small id="ambience-label">Ambiente seleccionado</small><span id="track-name">Preparando ambiente…</span></div>
       <div class="controls" aria-label="Controles globales">
         <div class="dropdown language-picker"><button id="language-trigger" class="language-trigger" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="language-menu"><i data-lucide="languages" aria-hidden="true"></i><span id="language-code" class="language-code">ES</span><i class="chevron" data-lucide="chevron-down" aria-hidden="true"></i></button><div id="language-menu" class="dropdown-menu language-menu" role="menu"></div></div>

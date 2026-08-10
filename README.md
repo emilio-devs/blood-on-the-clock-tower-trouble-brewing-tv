@@ -1,10 +1,10 @@
-# Blood on the Clocktower · TV Guide
+# Blood on the Clocktower · Game Guide
 
 Pantalla de referencia pública y multilingüe para partidas presenciales de **Blood on the Clocktower**. Está diseñada principalmente para una televisión 16:9 y también se adapta a tabletas y móviles.
 
 ## Abrir la pantalla
 
-- **Online:** [abrir la versión de GitHub Pages](https://emilio-devs.github.io/blood-on-the-clock-tower-trouble-brewing-tv/)
+- **Online:** [abrir la versión de GitHub Pages](https://emilio-devs.github.io/bloodontheclocktower/)
 - **En local:** descarga `index.html` y ábrelo con Chrome o Edge.
 
 El `index.html` publicado funciona como un único archivo autónomo y puede abrirse directamente. Los datos de personajes e idiomas se incrustan durante la compilación. La música y los iconos necesitan conexión a Internet porque se cargan desde OpenGameArt y Lucide.

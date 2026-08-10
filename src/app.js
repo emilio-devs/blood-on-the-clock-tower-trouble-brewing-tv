@@ -178,7 +178,7 @@
     elements.ogTitle.content = format(ui.ogTitle, {edition: edition.name});
     elements.ogDescription.content = format(ui.ogDescription, {edition: edition.name});
     elements.brand.textContent = ui.brand;
-    elements.heading.textContent = `${ui.brand} · ${edition.name}`;
+    elements.heading.textContent = title;
     elements.editionName.textContent = edition.name;
     elements.editionTrigger.setAttribute('aria-label', `${ui.editionSelector}: ${edition.name}`);
     elements.languageCode.textContent = currentLocale.toUpperCase();
