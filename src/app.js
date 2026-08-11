@@ -65,13 +65,12 @@
   let playing = false;
   let toastTimer = null;
   let failed = 0;
-  let userPaused = false;
-  let awaitingGesture = false;
+  let userPaused = true;
   let idleTimer = null;
 
   audio.preload = 'auto';
   audio.volume = .18;
-  audio.autoplay = true;
+  audio.autoplay = false;
 
   const escapeHtml = value => String(value)
     .replaceAll('&', '&amp;')
@@ -296,9 +295,8 @@
     if (userPaused) return;
     try {
       await audio.play();
-      awaitingGesture = false;
     } catch {
-      awaitingGesture = true;
+      setPlayState(false);
     }
   }
 
@@ -313,8 +311,8 @@
     }
   }
 
-  async function nextTrack(automatic = false) {
-    const shouldPlay = automatic || playing || !userPaused;
+  async function nextTrack() {
+    const shouldPlay = !userPaused;
     trackIndex = (trackIndex + 1) % tracks.length;
     loadTrack();
     if (shouldPlay) await playCurrent();
@@ -324,19 +322,17 @@
   wireDropdown(elements.languageTrigger, elements.languageMenu);
   document.addEventListener('pointerdown', event => {
     if (!event.target.closest('.dropdown')) closeMenus();
-    if (!event.target.closest('#play') && awaitingGesture && !userPaused) playCurrent();
   });
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape') closeMenus(true);
-    if (awaitingGesture && !userPaused) playCurrent();
   });
 
   audio.addEventListener('play', () => { failed = 0; setPlayState(true); });
   audio.addEventListener('pause', () => { if (!audio.ended || userPaused) setPlayState(false); });
-  audio.addEventListener('ended', () => nextTrack(true));
-  audio.addEventListener('error', () => { if (failed++ < tracks.length) nextTrack(true); else setPlayState(false); });
+  audio.addEventListener('ended', () => nextTrack());
+  audio.addEventListener('error', () => { if (failed++ < tracks.length) nextTrack(); else setPlayState(false); });
   elements.play.addEventListener('click', toggleMusic);
-  elements.next.addEventListener('click', () => nextTrack(false));
+  elements.next.addEventListener('click', () => nextTrack());
   elements.volume.addEventListener('input', event => {
     elements.volumeValue.textContent = `${event.target.value}%`;
     audio.volume = Number(event.target.value) / 100;
@@ -358,6 +354,5 @@
   renderApp();
   document.documentElement.dataset.ready = 'true';
   loadTrack(false);
-  playCurrent();
   wake();
 })();
